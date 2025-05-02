@@ -1,7 +1,6 @@
 import React from "react";
 import "./CSS/Footer.css"; // Import the CSS file
 import logo from "../Images/Logo.png";
-import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="footer">

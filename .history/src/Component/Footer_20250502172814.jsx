@@ -1,7 +1,6 @@
 import React from "react";
 import "./CSS/Footer.css"; // Import the CSS file
 import logo from "../Images/Logo.png";
-import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="footer">
@@ -20,7 +19,7 @@ const Footer = () => {
           <ul className="footer-linkss">
             <a href="/" className='navbarr'>Home</a> 
             <Link to ="/cars" className="navbarr">Cars</Link>
-            <Link to="/ContactForm" className="navbarr">Contact</Link>
+            <Link to="/ContactForm" className="navbar-l">Contact</Link>
             
           </ul>
         </div>

@@ -1,0 +1,293 @@
+body{
+    font-family: Poppins, sans-serif;
+}
+.car-rental-section {
+    background: #F5F8F7;
+    padding: 60px 20px;
+    
+  }
+  
+  .car-rental-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .left-section {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-weight: bold;
+    color: #046AAA;
+    /* font-weight: bold; */
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .car-image {
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .right-section {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    min-width: 300px;
+    
+  }
+  
+  .feature-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+  
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    margin-top: 20px;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .icon {
+    /* background: #000; */
+    color: #fff;
+    padding: 10px;
+    /* border-radius: 0px; */
+    font-size: 30px;
+   
+  }
+  
+  .feature-text h4 {
+    font-size: 18px;
+    color: #046AAA;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  
+  .feature-text p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+
+  @media screen and (max-width: 769px) {
+    .car-rental-section {
+      padding: 40px 20px;
+    }
+  
+    .car-rental-content {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  
+    .left-section {
+      flex: 1;
+      min-width: 280px;
+      text-align: center;
+    }
+  
+    .title {
+      font-size: 30px;
+    }
+  
+    .subtitle {
+      font-size: 16px;
+      margin-bottom: 20px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .car-image {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  
+    .right-section {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content:center ;
+      align-items: center;
+    }
+  
+    .feature-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 12px;
+      gap: 10px;
+      width: 50%;
+    }
+  
+    .icon {
+      padding: 8px;
+      font-size: 18px;
+    }
+  
+    .feature-text h4 {
+      font-size: 16px;
+    }
+  
+    .feature-text p {
+      font-size: 13px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .car-rental-section {
+      padding: 30px 10px;
+      margin-left: 20px;
+    }
+  
+    .car-rental-content {
+      gap: 20px;
+    }
+  
+    .left-section {
+      min-width: 240px;
+      text-align: center;
+    }
+  
+    .title {
+      font-size: 26px;
+    }
+  
+    .subtitle {
+      font-size: 14px;
+      margin-bottom: 15px;
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .car-image {
+      max-width: 350px;
+
+    }
+  
+   .right-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 2 cards per row */
+    gap: 10px;                       /* Space between the cards */
+    justify-items: center;           /* Center cards horizontally */
+  }
+
+  .feature-card {
+    width: 80%;
+    background: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    margin-top: 20px;
+  }
+  
+    .icon {
+      padding: 6px;
+      font-size: 16px;
+    }
+  
+    .feature-text h4 {
+      font-size: 14px;
+    }
+  
+    .feature-text p {
+      font-size: 12px;
+    }
+  }
+  
+  @media screen and (max-width: 321px) {
+    .car-rental-section {
+      padding: 20px 10px;
+    }
+  
+    .car-rental-content {
+      gap: 15px;
+    }
+  
+    .left-section {
+      min-width: 220px;
+      text-align: center;
+    }
+  
+    .title {
+      font-size: 22px;
+    }
+  
+    .subtitle {
+      font-size: 12px;
+      margin-bottom: 10px;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .car-image {
+      max-width: 320px;
+    }
+  
+    .right-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;  /* 2 cards per row */
+      gap: 10px;                       /* Space between the cards */
+      justify-items: center;           /* Center cards horizontally */
+    }
+  
+    .feature-card {
+      width: 60%;
+      background: #fff;
+      padding: 12px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+      margin-top: 20px;
+    }
+    .icon {
+      padding: 5px;
+      font-size: 14px;
+    }
+  
+    .feature-text h4 {
+      font-size: 12px;
+    }
+  
+    .feature-text p {
+      font-size: 10px;
+    }
+  }
+  

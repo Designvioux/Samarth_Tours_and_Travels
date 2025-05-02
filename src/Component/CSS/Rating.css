@@ -1,0 +1,117 @@
+/* Rating.css */
+
+.stats-section {
+  padding: 60px 20px;
+  background-color: #F5F8F7;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.stat-item:hover {
+  transform: translateY(-8px);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.stat-divider {
+  width: 60px;
+  margin: 10px auto;
+  border: 2px solid #007bff;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+
+
+/* For devices 769px and below */
+@media (max-width: 769px) {
+  .stats-section {
+    padding: 40px 15px;
+
+  }
+
+  .stat-item {
+    padding: 20px 15px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+  }
+}
+
+/* For devices 480px and below */
+@media (max-width: 480px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+    margin-left: 20px;
+  }
+
+  .stat-item {
+    padding: 18px 12px;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.95rem;
+  }
+
+  .stat-divider {
+    width: 40px;
+  }
+}
+
+/* For very small devices 321px and below */
+@media (max-width: 321px) {
+  .stats-section {
+    padding: 30px 10px;
+    margin-left: 20px;
+  }
+
+  .stat-item {
+    padding: 16px 10px;
+  }
+
+  .stat-number {
+    font-size: 1.6rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+
+  .stat-divider {
+    width: 30px;
+  }
+}

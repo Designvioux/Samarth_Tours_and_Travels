@@ -1,0 +1,171 @@
+
+.how-it-works {
+    text-align: center;
+    padding: 60px 20px;
+    background: #F5F8F7;
+  }
+  
+  .how-it-works h2 {
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #046AAA;
+  }
+  
+  .how-it-works .subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 50px;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    color: #046AAA;
+  }
+  
+  .step {
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border: 2px dashed #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  
+  .icon-wrapper.teal {
+    background-color: #00798c;
+    color: #fff;
+  }
+  
+  .icon-wrapper.orange {
+    background-color: #fcb900;
+    color: #fff;
+  }
+  
+  .icon-wrapper.black {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .step h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  .step p {
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
+
+  /* For devices 769px and below */
+@media (max-width: 769px) {
+  .how-it-works {
+    padding: 40px 15px;
+    margin-left: 20px;
+  }
+
+  .how-it-works h2 {
+    font-size: 32px;
+  }
+
+  .how-it-works .subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+  }
+
+  .steps {
+    gap: 30px;
+  }
+
+  .step h3 {
+    font-size: 1.1rem;
+  }
+
+  .step p {
+    font-size: 0.9rem;
+  }
+}
+
+/* For devices 480px and below */
+@media (max-width: 480px) {
+  .how-it-works{
+margin-left: 20px;
+  }
+  .how-it-works h2 {
+    font-size: 28px;
+  }
+
+  .how-it-works .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  .steps {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .icon-wrapper {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+  }
+
+  .step {
+    max-width: 100%;
+  }
+
+  .step h3 {
+    font-size: 1rem;
+  }
+
+  .step p {
+    font-size: 0.88rem;
+  }
+}
+
+/* For very small devices 321px and below */
+@media (max-width: 321px) {
+  .how-it-works {
+    padding: 30px 10px;
+    margin-left: 20px;
+  }
+
+  .how-it-works h2 {
+    font-size: 24px;
+  }
+
+  .how-it-works .subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+
+  .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    font-size: 1.6rem;
+  }
+
+  .step h3 {
+    font-size: 0.95rem;
+  }
+
+  .step p {
+    font-size: 0.85rem;
+  }
+}

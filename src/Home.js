@@ -25,11 +25,7 @@ const Home =()=> {
     <Rating/>
     <Rental/>
     <Location/>
- 
-
-
-    
-    </React.Fragment>
+        </React.Fragment>
    
   );
 }

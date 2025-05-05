@@ -117,6 +117,7 @@ color: white;
     align-items: flex-end;
     width: 1%;
     cursor: pointer;
+    
 }
 
 .contact-container .close-btn img {
@@ -248,7 +249,7 @@ color: white;
 
 .contact-container .phone-link {
     text-decoration: none;
-    color: inherit;
+    color: rgb(0, 81, 255);
 }
 
 .contact-container.phone-link:hover {

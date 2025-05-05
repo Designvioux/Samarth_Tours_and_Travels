@@ -1,9 +1,9 @@
 import React from "react";
 import "./CSS/Rental.css";
-import car from "../Images/swift-dzire.png";
+import car from "../Images/celerio.png";
 const features = [
   { title: "Best Deal",icon: "ℹ️" },
-  { title: "Doorstep Delivery",icon: "📦" },
+  { title: "Doorstep Pickup",icon: "📦" },
   { title: "Safe And Hygiene Rides",icon: "📷" },
   { title: "Latest Cars",icon: "🚗" },
   { title: "Customer Support",icon: "🎧" },
@@ -15,7 +15,7 @@ const CarRentalPlatform = () => {
     <section className="car-rental-section">
       <div className="car-rental-content">
         <div className="left-section">
-          <h2 className="title">Best Platform for Car Rental</h2>
+          <h2 className="title">Why Choose Us</h2>
           <p className="subtitle">
           Find and book reliable, affordable rental cars in minutes. Wide vehicle selection, transparent pricing, and 24/7 support-perfect for any trip.
           </p>

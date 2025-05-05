@@ -7,15 +7,22 @@ const BookingForm = () => {
   const [isConfirmationVisible, setIsConfirmationVisible] = useState(false);
 
   const cars = [
-    "Maruti Suzuki WagonR",
-    "Hyundai Aura",
-    "Maruti Suzuki Dzire",
-    "Maruti Suzuki Ertiga",
-    "Toyota Innova Crysta",
-    "Traveller",
+    "WagonR",
+    "Celerio",
+    "Suzuki Dzire",
+    "Ciaz",
+   "Etos",
+   "Ecco",
+   "Honda Mobilio",
+   "Tavera", 
+    "Ertiga",
     "Kia Carens",
-    "Honda Amaze",
-    "Mahindra Scorpio N",
+    "Innova",
+    "Innova Crysta",
+    "17STR Tempo Traveller",
+    "21STR Tempo Traveller",
+    "26STR Tempo Traveller",
+    "32STR Tempo Traveller",
   ];
 
   const formik = useFormik({

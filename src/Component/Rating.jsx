@@ -5,8 +5,8 @@ import "./CSS/Rating.css";
 const stats = [
   { number: 6000, label: 'Happy Customers' },
   { number: 16, label: 'Count of Cars' },
-  { number: 625000, label: 'Locations to Pickup' },
-  { number: 15000000, label: 'Total Kilometers' },
+  { number: 50, label: 'Locations to Pickup' },
+  // { number: 15000000, label: 'Total Kilometers' },
 ];
 
 const StatsSection = () => {

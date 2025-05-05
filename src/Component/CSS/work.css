@@ -47,17 +47,17 @@
   }
   
   .icon-wrapper.teal {
-    background-color: #00798c;
+    /* background-color: #00798c; */
     color: #fff;
   }
   
   .icon-wrapper.orange {
-    background-color: #fcb900;
+    /* background-color: #fcb900; */
     color: #fff;
   }
   
   .icon-wrapper.black {
-    background-color: #333;
+    /* background-color: #333; */
     color: #fff;
   }
   
@@ -123,7 +123,10 @@ margin-left: 20px;
   .icon-wrapper {
     width: 70px;
     height: 70px;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
+  }
+  .icon-wrapper i{
+    font-size: 30px;
   }
 
   .step {
@@ -138,6 +141,49 @@ margin-left: 20px;
     font-size: 0.88rem;
   }
 }
+
+
+/* For devices 400px and below */
+@media (max-width: 400px) {
+  .how-it-works {
+    margin-left: 15px;
+  }
+
+  .how-it-works h2 {
+    font-size: 24px;
+  }
+
+  .how-it-works .subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+  }
+
+  .steps {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .icon-wrapper {
+    width: 80px;
+    height: 80px;
+    font-size: 2.4rem;
+  }
+  .icon-wrapper i{
+    font-size: 30px;
+  }
+  .step {
+    max-width: 100%;
+  }
+
+  .step h3 {
+    font-size: 0.95rem;
+  }
+
+  .step p {
+    font-size: 0.82rem;
+  }
+}
+
 
 /* For very small devices 321px and below */
 @media (max-width: 321px) {
@@ -160,7 +206,9 @@ margin-left: 20px;
     height: 60px;
     font-size: 1.6rem;
   }
-
+  .icon-wrapper i{
+    font-size: 20px;
+  }
   .step h3 {
     font-size: 0.95rem;
   }

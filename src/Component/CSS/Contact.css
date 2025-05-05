@@ -446,6 +446,44 @@ input[type="datetime-local"] {
       font-size: 11px;
     }
   }
+  @media screen and (max-width: 420px) {
+    .contact-container.popup-form {
+      width: 85vw;
+      padding: 6vw;
+    }
+  
+    .contact-container h2 {
+      font-size: 6.5vw;
+    }
+  
+    .contact-container.popup-form p {
+      font-size: 3.2vw;
+    }
+  
+    .contact-container .close-btn img {
+      width: 7.5vw;
+      left: 72vw;
+    }
+  
+    .contact-container input,
+    .contact-container select {
+      padding: 12px;
+      font-size: 15px;
+    }
+  
+    ::placeholder {
+      font-size: 13px;
+    }
+  
+    .contact-container .send-email-btn {
+      font-size: 14px;
+      height: 42px;
+    }
+  
+    .contact-container .contact-whatsApp {
+      font-size: 11px;
+    }
+  }
   
   /* Extra small screen (max-width: 321px) */
   @media screen and (max-width: 321px) {
@@ -487,3 +525,4 @@ input[type="datetime-local"] {
       font-size: 10px;
     }
   }
+  

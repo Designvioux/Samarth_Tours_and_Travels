@@ -18,10 +18,14 @@ const ContactForm = () => {
         <div className="contact-leftt">
           <h2  className="contact-hd">Get in Touch<br />with Us</h2>
           <p className="contact-description">
-          We’d love to hear from you! Whether you have a question, need support, or just want to say hello, our team is here to help. Please feel free to reach out using the contact information below, or fill out the form, and we’ll get back to you as soon as possible.          </p>
-          <p className="contact-note">
-          Avoid your inquiry is delay response, please enter your WhatsApp/Wechat/Skype along with the message, so we can contact you at the very first time.          </p>
-        </div>
+          Do you have any questions? Need assistance?</p>         
+           <p className="contact-note">
+           Or just want to say hello?<br/>
+           <span className ="Contact-Note1 ">The Samarth Tours and Travels</span> team is always here for you.
+
+Reach out to us using the contact information provided below or fill out the form we will respond as soon as possible.
+
+To avoid delays in responding to your inquiry, please include your WhatsApp in your message so we can get in touch with you immediately.</p>        </div>
 
 
         <div className="contact-right">

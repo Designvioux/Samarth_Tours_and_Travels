@@ -10,7 +10,7 @@ const Footer = () => {
           <img src = {logo} className="logo" alt="samarth Tours"></img>
           <h3 className="book-span">Book your car anytime anywhere !</h3>
           <h4>Address:</h4>
-          <p>Gav Bhag, 6, Gujri, Narayan Peth,</p>
+          <p>Gaon Bhag , 6 ,Gujari Peth,</p>
           <p>Ichalkaranji, Maharashtra 416115</p>
           
 

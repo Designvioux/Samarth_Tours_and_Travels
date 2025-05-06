@@ -24,8 +24,8 @@ const HeroSection = () => {
       </div>
       <h1 className="hero-title">
  
-  <span className="bold-black">We Offer Luxury Buses And </span>
-  <span className='bold-black'> Car Rental Services</span>
+  <span className="bold-black">We offer luxury bus and </span>
+  <span className='bold-black'> car rental services</span>
 </h1>
       <div className="hero-content">
         <div className="car-image">

@@ -7,23 +7,28 @@ const BookingForm = () => {
   const [isConfirmationVisible, setIsConfirmationVisible] = useState(false);
 
   const cars = [
-    "WagonR",
-    "Celerio",
-    "Suzuki Dzire",
-    "Ciaz",
-   "Etos",
-   "Ecco",
-   "Honda Mobilio",
-   "Tavera", 
-    "Ertiga",
-    "Kia Carens",
-    "Innova",
-    "Innova Crysta",
-    "17STR Tempo Traveller",
-    "21STR Tempo Traveller",
-    "26STR Tempo Traveller",
-    "32STR Tempo Traveller",
+    "WagonR", "Celerio", "Suzuki Dzire", "Ciaz", "Etos", "Ecco", "Honda Mobilio",
+    "Tavera", "Ertiga", "Kia Carens", "Innova", "Innova Crysta",
+    "17STR Tempo Traveller", "21STR Tempo Traveller", "26STR Tempo Traveller", "32STR Tempo Traveller"
   ];
+
+  const formatDate = (dateStr) => {
+    const date = new Date(dateStr);
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  };
+
+  const formatDateTime = (dateStr) => {
+    const date = new Date(dateStr);
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const year = date.getFullYear();
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    return `${day}/${month}/${year} ${hours}:${minutes}`;
+  };
 
   const formik = useFormik({
     initialValues: {
@@ -32,7 +37,7 @@ const BookingForm = () => {
       contactNumber: "",
       selectedCar: "",
       pickUpLocation: "",
-      pickupDateTime: "", // Combined date and time
+      pickupDateTime: "",
       dropLocation: "",
       dropDate: "",
     },
@@ -50,10 +55,8 @@ const BookingForm = () => {
     }),
     onSubmit: async (values, { resetForm }) => {
       try {
-        const formattedDateTime = new Date(values.pickupDateTime).toLocaleString("en-IN", {
-          dateStyle: "medium",
-          timeStyle: "short",
-        });
+        const formattedPickupDateTime = formatDateTime(values.pickupDateTime);
+        const formattedDropDate = formatDate(values.dropDate);
 
         const message = `Hello,
 
@@ -67,11 +70,11 @@ Car Details:
 
 Pick-Up Details:
 - Location: ${values.pickUpLocation}
-- Date & Time: ${formattedDateTime}
+- Date & Time: ${formattedPickupDateTime}
 
 Drop-Off Details:
 - Location: ${values.dropLocation}
-- Date: ${values.dropDate}
+- Date: ${formattedDropDate}
 
 Kindly confirm the availability of the car. Let me know if you require any additional details.
 
@@ -79,9 +82,7 @@ Thank you,
 ${values.fullName}`;
 
         const businessContactNumber = "919561812854";
-        const waUrl = `https://wa.me/${businessContactNumber}?text=${encodeURIComponent(
-          message
-        )}`;
+        const waUrl = `https://wa.me/${businessContactNumber}?text=${encodeURIComponent(message)}`;
         const waWindow = window.open(waUrl, "_blank");
 
         if (!waWindow) {
@@ -104,7 +105,7 @@ ${values.fullName}`;
   return (
     <div className="heading">
       <div className="contact-container">
-        <h2>Rent This Car </h2>
+        <h2>Book Your Car </h2>
 
         {!isConfirmationVisible ? (
           <form onSubmit={formik.handleSubmit}>
@@ -125,126 +126,63 @@ ${values.fullName}`;
               </button>
             </div>
 
-            <input
-              type="text"
-              name="fullName"
-              placeholder="Enter your Full name"
-              {...formik.getFieldProps("fullName")}
-            />
-            {formik.touched.fullName && formik.errors.fullName && (
-              <span className="error">{formik.errors.fullName}</span>
-            )}
+            <input type="text" name="fullName" placeholder="Enter your Full name" {...formik.getFieldProps("fullName")} />
+            {formik.touched.fullName && formik.errors.fullName && <span className="error">{formik.errors.fullName}</span>}
 
-            <input
-              type="tel"
-              name="contactNumber"
-              placeholder="Enter Contact Number"
-              {...formik.getFieldProps("contactNumber")}
-            />
-            {formik.touched.contactNumber && formik.errors.contactNumber && (
-              <span className="error">{formik.errors.contactNumber}</span>
-            )}
+            <input type="tel" name="contactNumber" placeholder="Enter Contact Number" {...formik.getFieldProps("contactNumber")} />
+            {formik.touched.contactNumber && formik.errors.contactNumber && <span className="error">{formik.errors.contactNumber}</span>}
 
             <select name="selectedCar" {...formik.getFieldProps("selectedCar")}>
-              <option value="" disabled>
-                Select a Car
-              </option>
+              <option value="" disabled>Select a Car</option>
               {cars.map((car) => (
-                <option key={car} value={car}>
-                  {car}
-                </option>
+                <option key={car} value={car}>{car}</option>
               ))}
             </select>
-            {formik.touched.selectedCar && formik.errors.selectedCar && (
-              <span className="error">{formik.errors.selectedCar}</span>
-            )}
+            {formik.touched.selectedCar && formik.errors.selectedCar && <span className="error">{formik.errors.selectedCar}</span>}
 
             <div className="row">
               <div className="column">
-                <input
-                  type="text"
-                  name="pickUpLocation"
-                  placeholder="Enter Your Pick Up Location"
-                  {...formik.getFieldProps("pickUpLocation")}
-                />
-                {formik.touched.pickUpLocation && formik.errors.pickUpLocation && (
-                  <span className="error">{formik.errors.pickUpLocation}</span>
-                )}
+                <input type="text" name="pickUpLocation" placeholder="Enter Your Pick Up Location" {...formik.getFieldProps("pickUpLocation")} />
+                {formik.touched.pickUpLocation && formik.errors.pickUpLocation && <span className="error">{formik.errors.pickUpLocation}</span>}
               </div>
               <div className="column">
-                {/* <label className="label">Pick-Up Date & Time</label> */}
-                <input
-                  type="datetime-local"
-                  name="pickupDateTime"
-                  {...formik.getFieldProps("pickupDateTime")}
-                />
-                {formik.touched.pickupDateTime && formik.errors.pickupDateTime && (
-                  <span className="error">{formik.errors.pickupDateTime}</span>
-                )}
+                <input type="datetime-local" name="pickupDateTime" {...formik.getFieldProps("pickupDateTime")} />
+                {formik.touched.pickupDateTime && formik.errors.pickupDateTime && <span className="error">{formik.errors.pickupDateTime}</span>}
               </div>
             </div>
 
             <div className="row">
               <div className="column">
-                <input
-                  type="text"
-                  name="dropLocation"
-                  placeholder="Enter Your Drop Location"
-                  {...formik.getFieldProps("dropLocation")}
-                />
-                {formik.touched.dropLocation && formik.errors.dropLocation && (
-                  <span className="error">{formik.errors.dropLocation}</span>
-                )}
+                <input type="text" name="dropLocation" placeholder="Enter Your Drop Location" {...formik.getFieldProps("dropLocation")} />
+                {formik.touched.dropLocation && formik.errors.dropLocation && <span className="error">{formik.errors.dropLocation}</span>}
               </div>
               <div className="column">
-                <input
-                  type="date"
-                  name="dropDate"
-                  {...formik.getFieldProps("dropDate")}
-                />
-                {formik.touched.dropDate && formik.errors.dropDate && (
-                  <span className="error">{formik.errors.dropDate}</span>
-                )}
+                <input type="date" name="dropDate" {...formik.getFieldProps("dropDate")} />
+                {formik.touched.dropDate && formik.errors.dropDate && <span className="error">{formik.errors.dropDate}</span>}
               </div>
             </div>
 
             <div className="send-btn">
-              <button
-                type="submit"
-                className="send-email-btn"
-                disabled={!formik.isValid}
-              >
+              <button type="submit" className="send-email-btn" disabled={!formik.isValid}>
                 Send WhatsApp Message
               </button>
             </div>
+
             <div className="contact-whatsApp1">
               <p>
-                Contact us on   
-                <a href="tel:+919561812854" className="phone-link">
-                    +919561812854{" "}
-                </a>
+                Contact us on 
+                <a href="tel:+919561812854" className="phone-link"> +919561812854</a>
               </p>
             </div>
           </form>
         ) : (
           <div className="confirmation-content">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="100px"
-              viewBox="0 -960 960 960"
-              width="100px"
-              fill="#008000"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" height="100px" viewBox="0 -960 960 960" width="100px" fill="#008000">
               <path d="M424-296L706-578l-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
             </svg>
             <h2>Thank You for Booking!</h2>
-            <p>
-              Your booking has been successfully submitted. We will contact you
-              soon with further details.
-            </p>
-            <button className="ok-btn" onClick={() => setIsConfirmationVisible(false)}>
-              OK
-            </button>
+            <p>Your booking has been successfully submitted. We will contact you soon with further details.</p>
+            <button className="ok-btn" onClick={() => setIsConfirmationVisible(false)}>OK</button>
           </div>
         )}
       </div>

@@ -40,10 +40,11 @@ const BookingPopup = ({ isOpen, onClose, selectedCar }) => {
           dropDate,
         } = values;
 
-        const formattedDateTime = new Date(pickupDateTime).toLocaleString("en-IN", {
-          dateStyle: "medium",
-          timeStyle: "short",
-        });
+        const pickupDate = new Date(pickupDateTime);
+const formattedDateTime = `${pickupDate.getDate().toString().padStart(2, '0')}/${(pickupDate.getMonth() + 1)
+  .toString()
+  .padStart(2, '0')}/${pickupDate.getFullYear()} ${pickupDate.getHours().toString().padStart(2, '0')}:${pickupDate.getMinutes().toString().padStart(2, '0')}`;
+
 
         const message = `Hello,
 
@@ -96,7 +97,7 @@ ${fullName}`;
         <button className="close-btn" onClick={onClose}>
           &times;
         </button>
-        <h2>Rent This Car</h2>
+        <h2>Book Your Car</h2>
         {/* <p>Please select your trip type and fill the details or call us directly at the number below</p> */}
 
         <div className="trip-buttons">

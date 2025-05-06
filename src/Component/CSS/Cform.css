@@ -77,7 +77,7 @@ flex-direction: row;
   .CForm-Container .contact-hd{
     margin-right: 800px;
   }
-  
+ 
   .CForm-Container .contact-description {
     font-size: 16px;
     color: #666666;
@@ -93,13 +93,20 @@ flex-direction: row;
     width: 520px;
     margin-left: -20px;
   }
-  
+  .contact-note{
+    
+  }
  /* contact form */
  .CForm-Container .contact-right {
     border: 2px solid gray;
     padding: 20px;
     border-radius: 20px;
     
+    
+  }
+  .Contact-Note1{
+    font-weight: bold;
+    color: black;
     
   }
 

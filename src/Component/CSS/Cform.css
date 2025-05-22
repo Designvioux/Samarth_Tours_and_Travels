@@ -201,11 +201,12 @@ flex-direction: row;
   .contact-sectionn {
     flex-direction: column;
     padding: 40px 15px;
+    margin-left: -7px;
   }
 
   .contact-containerr {
     flex-direction: column;
-    gap: 30px;
+    gap: 5px;
     width: 100%;
   }
 
@@ -217,7 +218,7 @@ flex-direction: row;
 
   .CForm-Container .contact-leftt h2 {
     font-size: 8vw;
-    margin-top: 5vh;
+    margin-top: 2vh;
     margin-left: 0;
     width: 100%;
   }

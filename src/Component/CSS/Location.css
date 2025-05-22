@@ -30,6 +30,7 @@ body{
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+    
   }
   
   .location-card {
@@ -39,6 +40,7 @@ body{
     width: 250px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+   
   }
   
   .location-card:hover {
@@ -111,7 +113,8 @@ body{
   }
 
   .location-card {
-    width: 250px;
+    width: 15vw;
+    height: 35vh;
   }
 
   .location-info h3 {

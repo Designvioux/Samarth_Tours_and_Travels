@@ -11,7 +11,7 @@ import "./CSS/Contact.css";
 
 const HeroSection = () => {
   return (
-    <section className="hero" >
+    <section className="hero">
    
    
 
@@ -22,6 +22,7 @@ const HeroSection = () => {
 
         
       </div>
+      <div className='Hero-Container'>
       <h1 className="hero-title">
  
   <span className="bold-black">We offer luxury bus and </span>
@@ -29,10 +30,10 @@ const HeroSection = () => {
 </h1>
       <div className="hero-content">
         <div className="car-image">
-          <img src={bg} alt="Car" />
+          <img src={bg} alt="Car"  />
         </div>
       </div>
-
+</div>
     </section>
   );
 };

@@ -20,14 +20,11 @@ const BookingForm = () => {
     return `${day}/${month}/${year}`;
   };
 
-  const formatDateTime = (dateStr) => {
-    const date = new Date(dateStr);
-    const day = String(date.getDate()).padStart(2, "0");
-    const month = String(date.getMonth() + 1).padStart(2, "0");
-    const year = date.getFullYear();
-    const hours = String(date.getHours()).padStart(2, "0");
-    const minutes = String(date.getMinutes()).padStart(2, "0");
-    return `${day}/${month}/${year} ${hours}:${minutes}`;
+  const formatTime12Hour = (timeStr) => {
+    const [hour, minute] = timeStr.split(":").map(Number);
+    const ampm = hour >= 12 ? "PM" : "AM";
+    const hour12 = hour % 12 || 12;
+    return `${hour12}:${String(minute).padStart(2, "0")} ${ampm}`;
   };
 
   const formik = useFormik({
@@ -37,7 +34,8 @@ const BookingForm = () => {
       contactNumber: "",
       selectedCar: "",
       pickUpLocation: "",
-      pickupDateTime: "",
+      pickupDate: "",
+      pickupTime: "",
       dropLocation: "",
       dropDate: "",
     },
@@ -49,13 +47,15 @@ const BookingForm = () => {
         .required("Contact number is required"),
       selectedCar: Yup.string().required("Please select a car"),
       pickUpLocation: Yup.string().required("Pick Up Location is required"),
-      pickupDateTime: Yup.string().required("Pick Up Date & Time is required"),
+      pickupDate: Yup.string().required("Pick Up Date is required"),
+      pickupTime: Yup.string().required("Pick Up Time is required"),
       dropLocation: Yup.string().required("Drop Location is required"),
       dropDate: Yup.string().required("Drop Date is required"),
     }),
     onSubmit: async (values, { resetForm }) => {
       try {
-        const formattedPickupDateTime = formatDateTime(values.pickupDateTime);
+        const formattedPickupDate = formatDate(values.pickupDate);
+        const formattedPickupTime = formatTime12Hour(values.pickupTime);
         const formattedDropDate = formatDate(values.dropDate);
 
         const message = `Hello,
@@ -70,7 +70,8 @@ Car Details:
 
 Pick-Up Details:
 - Location: ${values.pickUpLocation}
-- Date & Time: ${formattedPickupDateTime}
+- Date: ${formattedPickupDate}
+- Time: ${formattedPickupTime}
 
 Drop-Off Details:
 - Location: ${values.dropLocation}
@@ -105,7 +106,7 @@ ${values.fullName}`;
   return (
     <div className="heading">
       <div className="contact-container">
-        <h2>Book Your Car </h2>
+        <h2>Book Your Car</h2>
 
         {!isConfirmationVisible ? (
           <form onSubmit={formik.handleSubmit}>
@@ -125,14 +126,14 @@ ${values.fullName}`;
                 Round Trip
               </button>
             </div>
-
-            <input type="text" name="fullName" placeholder="Enter your Full name" {...formik.getFieldProps("fullName")} />
+<div className="Allinput">
+            <input type="text" name="fullName" className="Fullname" placeholder="Enter your Full name" {...formik.getFieldProps("fullName")} />
             {formik.touched.fullName && formik.errors.fullName && <span className="error">{formik.errors.fullName}</span>}
 
-            <input type="tel" name="contactNumber" placeholder="Enter Contact Number" {...formik.getFieldProps("contactNumber")} />
+            <input type="tel" name="contactNumber" className="Contactno" placeholder="Enter Contact Number" {...formik.getFieldProps("contactNumber")} />
             {formik.touched.contactNumber && formik.errors.contactNumber && <span className="error">{formik.errors.contactNumber}</span>}
 
-            <select name="selectedCar" {...formik.getFieldProps("selectedCar")}>
+            <select name="selectedCar" className="Select" {...formik.getFieldProps("selectedCar")}>
               <option value="" disabled>Select a Car</option>
               {cars.map((car) => (
                 <option key={car} value={car}>{car}</option>
@@ -140,26 +141,46 @@ ${values.fullName}`;
             </select>
             {formik.touched.selectedCar && formik.errors.selectedCar && <span className="error">{formik.errors.selectedCar}</span>}
 
-            <div className="row">
-              <div className="column">
-                <input type="text" name="pickUpLocation" placeholder="Enter Your Pick Up Location" {...formik.getFieldProps("pickUpLocation")} />
-                {formik.touched.pickUpLocation && formik.errors.pickUpLocation && <span className="error">{formik.errors.pickUpLocation}</span>}
-              </div>
-              <div className="column">
-                <input type="datetime-local" name="pickupDateTime" {...formik.getFieldProps("pickupDateTime")} />
-                {formik.touched.pickupDateTime && formik.errors.pickupDateTime && <span className="error">{formik.errors.pickupDateTime}</span>}
-              </div>
+            <div className="column">
+              <input type="text" name="pickUpLocation" className="Pickup" placeholder="Enter Your Pick Up Location" {...formik.getFieldProps("pickUpLocation")} />
+              {formik.touched.pickUpLocation && formik.errors.pickUpLocation && <span className="error">{formik.errors.pickUpLocation}</span>}
             </div>
 
-            <div className="row">
-              <div className="column">
-                <input type="text" name="dropLocation" placeholder="Enter Your Drop Location" {...formik.getFieldProps("dropLocation")} />
-                {formik.touched.dropLocation && formik.errors.dropLocation && <span className="error">{formik.errors.dropLocation}</span>}
-              </div>
-              <div className="column">
-                <input type="date" name="dropDate" {...formik.getFieldProps("dropDate")} />
-                {formik.touched.dropDate && formik.errors.dropDate && <span className="error">{formik.errors.dropDate}</span>}
-              </div>
+            <div className="column">
+              <input
+                type="date"
+                name="pickupDate"
+                className="PickupDate"
+                placeholder="Select Pick Up Date"
+                {...formik.getFieldProps("pickupDate")}
+              />
+              {formik.touched.pickupDate && formik.errors.pickupDate && <span className="error">{formik.errors.pickupDate}</span>}
+  </div>
+            <div className="column">
+              <input
+                type="time"
+                name="pickupTime"
+                className="PickupTime"
+                placeholder="Select Pick Up Time"
+                {...formik.getFieldProps("pickupTime")}
+              />
+              {formik.touched.pickupTime && formik.errors.pickupTime && <span className="error">{formik.errors.pickupTime}</span>}
+            </div>
+
+            <div className="column">
+              <input type="text" name="dropLocation" className="Droplocation" placeholder="Enter Your Drop Location" {...formik.getFieldProps("dropLocation")} />
+              {formik.touched.dropLocation && formik.errors.dropLocation && <span className="error">{formik.errors.dropLocation}</span>}
+            </div>
+
+            <div className="column">
+              <input
+                type="date"
+                name="dropDate"
+                className="Dropdate"
+                placeholder="Select Drop Date"
+                {...formik.getFieldProps("dropDate")}
+              />
+              {formik.touched.dropDate && formik.errors.dropDate && <span className="error">{formik.errors.dropDate}</span>}
             </div>
 
             <div className="send-btn">
@@ -167,10 +188,10 @@ ${values.fullName}`;
                 Send WhatsApp Message
               </button>
             </div>
-
+</div>
             <div className="contact-whatsApp1">
               <p>
-                Contact us on 
+                Contact us on
                 <a href="tel:+919561812854" className="phone-link"> +919561812854</a>
               </p>
             </div>

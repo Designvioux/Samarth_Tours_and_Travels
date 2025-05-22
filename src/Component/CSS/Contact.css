@@ -1,5 +1,6 @@
 body{
     background-color: #F5F8F7;
+    font-family:"Roboto Condensed", "Roboto Condensed Placeholder", sans-serif;
 }
 /* Booking Form */
 .contact-container{
@@ -7,7 +8,7 @@ body{
     width: 100%;
 position: relative;
 margin-top: 0px;
-gap: 2px;
+gap: 1px;
 
 
 }
@@ -19,7 +20,8 @@ gap: 2px;
 
     text-align: center;
     margin-bottom: 20px;
-    margin-top: 30px;
+    margin-top: -10px;
+  
 }
 .contact-container .button {
     border-radius: 32px;
@@ -33,6 +35,7 @@ gap: 2px;
     font-size: 14px;
     font-weight: bold;
     transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    margin-top: -10px;
 }
 
 .contact-container .button.active{
@@ -102,6 +105,7 @@ color: white;
     font-size: 2vw;
     color: #000000;
     font-weight: 700;
+   
 }
 
 .contact-container.popup-form p {
@@ -109,6 +113,7 @@ color: white;
     color: #6e6e6e;
     font-weight: 400;
     margin-bottom: 0.4vw;
+    
 }
 
 .contact-container.close-btn {
@@ -131,8 +136,7 @@ color: white;
 
 }
 
-.contact-container input,
-.contact-container select {
+ .Fullname{
     width: 100%;
     padding: 0.7vw;
     margin: 0.6vw 0;
@@ -141,12 +145,119 @@ color: white;
     background-color: #E7E7E7;
     box-sizing: border-box;
     color: #808080;
-
+    
+ }
+ .Fullname::placeholder {
+  font-size: clamp(12px, 1vw, 18px);
 }
 
 
+ .Contactno{
+    width: 100%;
+    padding: 0.7vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+ }
+ .Contactno::placeholder {
+  font-size: clamp(12px, 1vw, 18px);
+}
+.Select{
+    width: 100%;
+    padding: 0.7vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+}
+.Select::placeholder {
+  font-size: clamp(12px, 1vw, 18px);
+}
+.Pickup{
+    width: 100%;
+    padding: 0.7vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+    
+}
+.Pickup::placeholder {
+  font-size: clamp(12px, 1vw, 18px);
+}
+/* .DateTime{
+    width: 100%;
+    padding: 0.7vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+} */
+.contact-container input.Droplocation,
+.contact-container input.DropDate {
+    width: 100%;
+    padding: 0.7vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+}
+.Droplocation::placeholder {
+  font-size: clamp(12px, 1vw, 18px);
+}
 
+.PickupDate{
+   width: 100%;
+    padding: 0.7vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+}
+.PickupDate::placeholder {
+  font-size: clamp(12px, 1vw, 18px);
+}
+.PickupTime{
+  width: 100%;
+    padding: 0.7vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+}
+.PickupTime::placeholder {
+  font-size: clamp(12px, 1vw, 18px);
+  
+}
+.Dropdate{
+   width: 100%;
+    padding: 0.7vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+}
 
+.DropDate::placeholder {
+  font-size: clamp(12px, 1vw, 18px);
+}
 .contact-container .example-full-width {
     width: 100%;
 }
@@ -188,7 +299,7 @@ color: white;
 
 .contact-container .column {
     flex: 1;
-    width: 50%;
+  
     
 }
 
@@ -332,197 +443,219 @@ input[type="datetime-local"] {
     font-weight: 500;
     margin-bottom: 4px;
   }
-  
-  
-/* ------------------ Responsive Design ------------------ */
-@media screen and (max-width: 1024px) {
-    .contact-container.popup-form {
-        width: 60vw;
-    }
+  @media (min-width: 321px) and (max-width: 500px) {
+  .contact-container.popup-form {
+    width: 92vw;
+    padding: 4vw;
+  }
 
-    .contact-container .close-btn img {
-        left: 50vw;
-        width: 4vw;
-    }
+  .contact-container.popup-form h2 {
+    font-size: 4.5vw;
+  }
 
-    .contact-container.popup-form h2 {
-        font-size: 3vw;
-    }
+  .contact-container.popup-form p {
+    font-size: 4.2vw;
+  }
 
-    ::placeholder {
-        font-size: 1.3vw;
-    }
+  .contact-container .button-group {
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+
+  .contact-container .button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .contact-container .row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact-container .column {
+    width: 100%;
+  }
+
+  .Fullname,
+  .Contactno,
+  .Select,
+  .Pickup,
+  .PickupDate,
+  .PickupTime,
+  .Dropdate,
+  .contact-container input.Droplocation,
+  .contact-container input.DropDate {
+    font-size: 15px;
+    padding: 3vw;
+  }
+ .PickupDate{
+  width: 100%;
+  padding: 0.7vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
+  margin: 0.6vw 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #E7E7E7;
+  box-sizing: border-box;
+  color: #808080;
+
+  background-image: url('../../Images/choose_your_pickup_date.png'); /* Replace with your icon URL */
+  background-repeat: no-repeat;
+  background-size: 40vw 2.8vh; /* Size of icon */
+  background-position: 0.7vw center; /* Position icon inside input */
+  background-position-x: -4vw;
+ }
+ .PickupTime{
+  width: 100%;
+  padding: 0.7vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
+  margin: 0.6vw 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #E7E7E7;
+  box-sizing: border-box;
+  color: #808080;
+
+  background-image: url('../../Images/choose_your_pickup_time.png'); /* Replace with your icon URL */
+  background-repeat: no-repeat;
+  background-size: 40vw 2.8vh; /* Size of icon */
+  background-position: 0.7vw center; /* Position icon inside input */
+  background-position-x: -4vw;
+ }
+ .Dropdate{
+  width: 100%;
+  padding: 0.7vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
+  margin: 0.6vw 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #E7E7E7;
+  box-sizing: border-box;
+  color: #808080;
+
+  background-image: url('../../Images/choose_your_drop_date.png'); /* Replace with your icon URL */
+  background-repeat: no-repeat;
+  background-size: 40vw 2.8vh; /* Size of icon */
+  background-position: 0.7vw center; /* Position icon inside input */
+  background-position-x: -4vw;
+ }
+  .contact-container .send-email-btn {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .contact-container .close-btn img {
+    width: 5vw;
+    right: 12px;
+    top: 12px;
+    left: auto;
+  }
+
+  ::placeholder {
+    font-size: 13px;
+  }
+
+  input[type="datetime-local"] {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .contact-whatsApp1 {
+    font-size: 11px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ok-btn {
+    padding: 18px;
+  }
 }
 
-@media screen and (max-width: 769px) {
-    .contact-container.popup-form {
-        width: 85vw;
-        padding: 4vw;
-    }
+  @media (max-width: 320px) {
+  .contact-container.popup-form {
+    width: 94vw;
+    padding: 4vw;
+    border-radius: 10px;
+  }
 
-    .contact-container h2 {
-        font-size: 5vw;
-    }
+  .contact-container.popup-form h2 {
+    font-size: 5vw;
+    margin-bottom: 10px;
+  }
 
-    .contact-container.popup-form p {
-        font-size: 2.8vw;
-    }
+  .contact-container.popup-form p {
+    font-size: 3.8vw;
+    margin-bottom: 12px;
+  }
 
-    .contact-container .close-btn img {
-        width: 6vw;
-        left: 70vw;
-    }
+  .contact-container .button-group {
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-    .contact-container .row {
-        flex-direction: column;
-        gap: 12px;
-    }
+  .contact-container .button {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px;
+    border-radius: 20px;
+  }
 
-    .contact-container .column {
-        width: 100%;
-    }
+  .contact-container .row {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .contact-container input,
-    .contact-container select {
-        padding: 15px;
-        font-size: 16px;
-    }
+  .contact-container .column {
+    width: 100%;
+  }
 
-    ::placeholder {
-        font-size: 14px;
-    }
+  .Fullname,
+  .Contactno,
+  .Select,
+  .Pickup,
+  .PickupDate,
+  .PickupTime,
+  .Dropdate,
+  .contact-container input.Droplocation,
+  .contact-container input.DropDate {
+    font-size: 13px;
+    padding: 10px;
+  }
 
-    .contact-container .button-group {
-        flex-direction:row;
-        gap: 12px;
-        margin-bottom: 20px
-    }
+  input[type="datetime-local"] {
+    font-size: 13px;
+    padding: 10px;
+  }
 
-    .contact-container .send-email-btn {
-        font-size: 16px;
-        height: 44px;
-    }
+  ::placeholder {
+    font-size: 12px;
+  }
 
-    .contact-container .contact-whatsApp {
-        font-size: 12px;
-    }
+  .contact-container .send-email-btn {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .contact-container .close-btn img {
+    width: 7vw;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .contact-whatsApp1 {
+    font-size: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  .ok-btn {
+    padding: 14px;
+    text-align: center;
+  }
 }
-
-@media screen and (max-width: 480px) {
-    .contact-container.popup-form {
-      width: 80vw;
-      padding: 6vw;
-    }
-  
-    .contact-container h2 {
-      font-size: 6vw;
-    }
-  
-    .contact-container.popup-form p {
-      font-size: 3.5vw;
-    }
-  
-    .contact-container .close-btn img {
-      width: 8vw;
-      left: 72vw;
-    }
-  
-    .contact-container input,
-    .contact-container select {
-      padding: 12px;
-      font-size: 15px;
-    }
-  
-    ::placeholder {
-      font-size: 13px;
-    }
-  
-    .contact-container .send-email-btn {
-      font-size: 14px;
-      height: 42px;
-    }
-  
-    .contact-container .contact-whatsApp {
-      font-size: 11px;
-    }
-  }
-  @media screen and (max-width: 420px) {
-    .contact-container.popup-form {
-      width: 85vw;
-      padding: 6vw;
-    }
-  
-    .contact-container h2 {
-      font-size: 6.5vw;
-    }
-  
-    .contact-container.popup-form p {
-      font-size: 3.2vw;
-    }
-  
-    .contact-container .close-btn img {
-      width: 7.5vw;
-      left: 72vw;
-    }
-  
-    .contact-container input,
-    .contact-container select {
-      padding: 12px;
-      font-size: 15px;
-    }
-  
-    ::placeholder {
-      font-size: 13px;
-    }
-  
-    .contact-container .send-email-btn {
-      font-size: 14px;
-      height: 42px;
-    }
-  
-    .contact-container .contact-whatsApp {
-      font-size: 11px;
-    }
-  }
-  
-  /* Extra small screen (max-width: 321px) */
-  @media screen and (max-width: 321px) {
-    .contact-container.popup-form {
-      width: 95vw;
-      padding: 8vw;
-    }
-  
-    .contact-container h2 {
-      font-size: 7vw;
-    }
-  
-    .contact-container.popup-form p {
-      font-size: 4vw;
-    }
-  
-    .contact-container .close-btn img {
-      width: 10vw;
-      left: 70vw;
-    }
-  
-    .contact-container input,
-    .contact-container select {
-      padding-left: 1vw;
-      padding-right: 1vw;
-      font-size: 14px;
-    }
-  
-    ::placeholder {
-      font-size: 12px;
-    }
-  
-    .contact-container .send-email-btn {
-      font-size: 13px;
-      height: 40px;
-    }
-  
-    .contact-container .contact-whatsApp {
-      font-size: 10px;
-    }
-  }
-  

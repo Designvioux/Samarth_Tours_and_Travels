@@ -4,6 +4,7 @@ import "./CSS/Cform.css";
 
 
 import Contactform from "../Component/Contact.jsx";
+import BookingForm from "../Component/Contact.jsx";
 const ContactForm = () => {
     return(
        
@@ -29,7 +30,7 @@ To avoid delays in responding to your inquiry, please include your WhatsApp in y
 
 
         <div className="contact-right">
-          <Contactform /> {/* Your booking form goes here! */}
+          <BookingForm/> {/* Your booking form goes here! */}
         </div>
 
        

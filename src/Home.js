@@ -6,7 +6,7 @@ import Cars from "./Component/Cartype.jsx";
 import Rating from "./Component/Rating.jsx";
 import Location from "./Component/Location.jsx";
 import Rental from "./Component/Rental.jsx";
-
+import Aboutus from "./Component/Aboutus.jsx";
 import HeroSection from './Component/Home.jsx';
 
 // import BookingForm from './Component/Contact.jsx';
@@ -18,6 +18,7 @@ const Home =()=> {
 <div id='Home'>
     <HeroSection  />
     </div>
+    <Aboutus/>
     <Work/>
     <div id='Cars'>
     <Cars/>

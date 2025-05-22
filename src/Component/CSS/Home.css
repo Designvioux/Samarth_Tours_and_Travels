@@ -1,536 +1,576 @@
+/* body {
+  font-family: "Roboto Condensed", "Roboto Condensed Placeholder", sans-serif;
+  padding: 0;
+  overflow-x: hidden;
+}
 
-  body{
-    font-family:Poppins, sans-serif;
+.hero {
+  background: url(../../Images/bacg.jpg) no-repeat center center;
+  background-size: cover;
+  max-height: 100vh;
+padding: 5vh 1vw;
+  margin-top: -5vh;
+  display: flex;
+  position: relative;
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2vh 3vw;
+}
 
-    padding: 0;
-    overflow-x: hidden;
-    
-    
-  }
+.text-content {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.car-image img {
+  width: min(90vw, 45rem);
+  margin-left: 6vw;
+  margin-right: 20vw;
+
+  background-size: cover;
+}
+
+.home-container {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.contact-form {
+  background: #ffffff;
+  padding: 1.5rem;
+  border: 0.125rem solid #ccc;
+  border-radius: 1rem;
+  max-width: 80%;
+  width: 35%;
+  margin: 5vh auto 75vh auto;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  max-height: 80%;
+  height: 90vh;
+}
+
+.hero-tagline {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-bottom: 30rem;
+  margin-left: 6vw;
+  margin-right: -30vw;
+  text-shadow: 0.125rem 0.125rem 0.25rem white;
+}
+
+.hero-title {
+  text-align: center;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  margin: 8vh auto;
+  margin-left: 5vw;
+  margin-right: -25vw;
+  width: 85%;
+}
+
+.bold-black {
+  font-family: "Roboto Condensed", "Roboto Condensed Placeholder", sans-serif;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 900;
+  background: linear-gradient(to bottom, #ffffff 5%, #0066ff 50%, #0427c0 45%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0.05rem white;
+  text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+ */
+
+
+body {
+  font-family: "Roboto Condensed", "Roboto Condensed Placeholder", sans-serif;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.hero {
+  background: url(../../Images/bacg.jpg) no-repeat center center;
+  background-size: cover;
+  max-height: 100vh;
+  padding: 5vh 1vw;
+  margin-top: -5vh;
+  display: flex;
+  position: relative;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50vw;
+  padding: 2vh 0vw;
+
+}
+
+.text-content {
+  flex: 1;
+  padding-right: 4vw;
+}
+
+.car-image img {
+  width: min(90vw, 45vw);
+  margin-left: 6vw;
+  margin-right: 5vw;
+  background-size: cover;
+}
+
+.home-container {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 6vw;
+}
+
+.contact-form {
+  background: #ffffff;
+  padding: 3vh 1.5vw;
+  border: 0.5vh solid #ccc;
+  border-radius: 2vw;
+  max-width: 80vw;
+  width: 35vw;
+  margin: 5vh auto 5vh auto;
+  box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  height: clamp(42vw, 68vh, 70vh);
+}
+
+
+.hero-tagline {
+  font-size: clamp(2vh, 5vw, 7vh);
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-bottom: 30vh;
+  margin-left: 6vw;
+  margin-right: -30vw;
+  text-shadow: 0.5vw 0.5vh 1vh white;
+}
+
+.hero-title {
+  text-align: center;
+  line-height: 1.2;
+  margin: 8vh auto;
+  margin-left: 0vw;
+  margin-right: -25vw;
+  width: 50vw;
+
+
+}
+
+.bold-black {
+  font-family: "Roboto Condensed", "Roboto Condensed Placeholder", sans-serif;
+  font-size: clamp(3vh, 4.5vw, 9vh);
+  font-weight: 900;
+  background: linear-gradient(to bottom, #ffffff 5%, #0066ff 50%, #0427c0 45%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0.2vh white;
+  text-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.25);
+  width: 100vw;
+}
+
+
+@media (min-width: 1241px) and (max-width: 1440px) {
   .hero {
-    background: #F5F8F7;
-    min-height: 100vh;
-    padding: 5px 5px;
-   position: relative;
-    background: url(../../Images/bacg.jpg);
-    background-size: cover;
-    width: 100%;
-    margin-top: -50px;
-display: flex;
-  }
-  
-
-  .contact-btn {
-    color: white; /* or whatever your navbar text color is */
-    font-size: inherit;
-    text-decoration: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-  }
-  
-
-
-  
-  .auth-buttons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  
-  
-  
-  .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .text-content {
-    flex: 1;
-    padding-right: 30px;
-  }
-  
-  .trust-badge {
-    background: #fff;
-    padding: 10px 20px;
-    border-radius: 50px;
-    display: inline-block;
-    margin-bottom: 20px;
-    font-weight: 500;
-    font-size: 14px;
-  }
-  
-  h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #222;
-  }
-  
-  .highlight {
-    color: #0B6BAA;
-  }
-  
-  p {
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 30px;
-    color: #666;
-  }
-  
-  
-  
-  .car-image img {
-     width: 700px;
-    margin-left: -300px;
-    margin-right: 300px;
-    margin-top: 300px; 
-    background-size: cover;
-    
-  }
-  
-
-  
-  .home-container {
-    /* background: url('C:\Samarth_Tours_Travels\samarth_tours_travels\src\Images\background-hero.png') no-repeat center center; */
-    /* background-size: cover; */
-    min-height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-   
-  }
-  
-  .form-card {
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px 10px;
-    /* width: 100px;
-    width: 100%; */
-    position: relative;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    
-  }
-  
-  .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: #046AAA;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    font-size: 18px;
-  }
-  
-  h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-   
-  }
-  
-  p {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .trip-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-  }
-  
-  .trip-buttons button {
-    border: 1px solid #000;
-    background: transparent;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .trip-buttons .active {
-    background: black;
-    color: white;
-  }
-  
-  .contact-form {
-    background: #ffffff;
-    padding: 20px;
-    border: 2px solid #ccc; /* 👈 adds the border */
-    border-radius: 15px; /* 👈 rounded corners */
-    max-width: 550px;
-    margin: 100px auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* optional: light shadow for a nice effect */
-    display: flex;
     flex-direction: row;
-    gap: 15px;
-    margin-left: 50px;
-    margin-bottom: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8vh 10vw;
+    margin-top: 0;
+    max-height: 100vh;
+  }
+
+  .hero-content {
+    flex-direction: row;
+    width: 100%;
+    padding: 5vh 5vw;
+    align-items: center;
+    text-align: left;
+    gap: 4vw;
+  }
+
+  .text-content {
+    width: 50%;
+    padding-right: 3vw;
+  }
+
+  .car-image img {
+    width: 28vw;
+    margin: 0 auto;
+  }
+
+  .hero-tagline {
+    /* Optional tagline styling */
+  }
+
+  .hero-title {
+    width: 100%;
+    margin-bottom: 2vh;
+  }
+
+  .bold-black {
+    font-size: clamp(2.5rem, 3.5vw, 4rem);
+    width: 100%;
+  }
+
+  .contact-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80vw;
+    padding: 6vh 3vw 8vh;
+    gap: 2vh;
+    height: 70vh;
+  
+  }
+
+  .home-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 6vh 10vw;
+    text-align: left;
+
+  }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1240px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6vh 10vw;
+    margin-top: 0;
+    max-height: 110vh;
+  }
+
+  .hero-content {
+    flex-direction: row;
+    width: 100%;
+    padding: 4vh 5vw;
+    align-items: center;
+    text-align: left;
+    gap: 4vw;
+  }
+
+  .text-content {
+    width: 50%;
+    padding-right: 3vw;
+  }
+
+  .car-image img {
+    width: 30vw;
+    margin: 0 auto;
+    margin-bottom: 3vw;
+  }
+
+  .hero-tagline {
+    /* Add styling if needed */
+  }
+
+  .hero-title {
+    width: 100%;
+    margin-bottom: 2vh;
+  }
+
+  .bold-black {
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+    width: 100%;
    
   }
-  
-  
-  .contact-form input,
-  .contact-form select {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-    background: #f2f2f2;
-    font-family: Poppins, sans-serif;
+
+  .contact-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 85vw;
+    padding: 6vh 4vw;
+    gap: 2vh;
+    height: 75vh;
+
   }
-  .contact-form select{
-    font-family: Poppins, sans-serif;
-    color: rgb(137, 137, 137);
-    font-size: 14px;
-  }
-  .pickup-drop {
-    display: flex;
-    gap: 10px;
-    
-  }
-  
-  .error-text {
-    color: red;
-    font-size: 12px;
+
+  .home-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 6vh 10vw;
     text-align: left;
   }
-  
-  .whatsapp-btn {
-    margin-top: 20px;
-    padding: 12px;
-    background: #e1e1e1;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    display: flex;
+}
+
+@media (min-width: 770px) and (max-width: 1024px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-weight: bold;
-    color: #888;
-    cursor: not-allowed;
+    padding: 6vh 8vw;
+    margin-top: 0;
+    max-height: 120vh;
   }
-  
-  .whatsapp-btn img {
-    width: 20px;
+
+  .hero-content {
+    flex-direction: row;
+    width: 100%;
+    padding: 4vh 4vw;
+    align-items: center;
+    text-align: left;
+    gap: 4vw;
   }
-  
-  .contact-numbers {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #555;
+
+  .text-content {
+    width: 50%;
+    padding-right: 2vw;
   }
-  
-  .contact-numbers a {
-    color: blue;
-    text-decoration: underline;
+
+  .car-image img {
+    width: 35vw;
+    margin: 0 auto;
   }
-  
+
   .hero-tagline {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color:black; 
-    text-align: center;
-    margin-bottom: 30rem;
-    margin-left: 100px;
-    margin-right: -450px;
-    text-shadow: 2px 2px 4px white;
+    /* Add styling if required */
   }
+
   .hero-title {
-    text-align: center;
-    margin-bottom: 30rem;
-    line-height: 1.2;
-    margin-left: 50px;
-    margin-right: -400px;
-    margin-top: 130px;
-    width: 45%;
+    width: 100%;
+    margin-bottom: 2vh;
+  }
+
+  .bold-black {
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    width: 100%;
+  }
+
+  .contact-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90vw;
+    padding: 6vh 4vw;
+    gap: 2vh;
+  height: 80vh;
     
   }
-  
- 
-  .bold-black {
-  
-    font-family: Poppins, sans-serif;
-    font-size: 3.0rem;
-    font-weight: 900;
-    background: linear-gradient(to bottom, #ffffff 5%, #0066ff 50%, #0427c0 45%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-stroke: 0.8px white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); /* Adds subtle shadow for depth */
+
+  .home-container {
+    flex-direction: column;
+    padding: 6vh 8vw;
+    text-align: center;
   }
-  
-  
+}
 
 
-/* Responsive for tablets and below (up to 769px) */
-@media (max-width: 769px) {
+
+@media (min-width: 501px) and (max-width: 769px) {
   .hero {
     flex-direction: column;
-    padding: 20px 10px;
+    padding: 6vh 8vw;
     margin-top: 0;
-    text-align: center;
+    max-height: 300vh;
   }
 
   .hero-content {
     flex-direction: column;
-    gap: 20px;
-  }
-
-
-  .hero-title {
-    margin: 50px auto 20px auto;
-    width: 90%;
+    width: 85vw;
+    padding: 4vh 5vw;
+    align-items: center;
     text-align: center;
-  }
-
-  .hero-tagline {
-    margin: 20px auto;
-    font-size: 2rem;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .bold-black {
-    font-size: 2.5rem;
-    -webkit-text-stroke: 0.5px white;
   }
 
   .text-content {
     padding-right: 0;
-    text-align: center;
+    width: 100%;
   }
 
   .car-image img {
+    width: 75vw;
+    margin: 4vh auto;
+  }
+
+  .hero-tagline {
+    /* Optional: style tagline if needed */
+  }
+
+  .hero-title {
+    margin-left: 0;
+    margin-right: 0;
+    width: 85vw;
+    margin-bottom: 3vh;
+  }
+
+  .bold-black {
+    font-size: clamp(2rem, 5vw, 3rem);
     width: 100%;
-    max-width: 350px;
-    margin: 30px auto 0 auto;
-    display: block;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-
-  p {
-    font-size: 15px;
-    line-height: 1.6;
   }
 
   .contact-form {
-    max-width: 90%;
-    margin: 50px auto;
-    padding: 15px;
-  }
-
-  .pickup-drop {
     flex-direction: column;
-    gap: 15px;
-  }
-
-  .trip-buttons {
-    display: flex;
-    flex-direction: row;
+    width: 60vw;
+    padding: 5vh 4vw;
+    height: auto;
+    gap: 2vh;
+    margin-bottom: 8vh;
   }
 
   .home-container {
-    padding: 15px;
     flex-direction: column;
-  }
-
-  .form-card {
-    padding: 20px;
-    width: 100%;
+    padding: 5vh 6vw;
+    text-align: center;
   }
 }
 
-/* Responsive for small mobile screens (up to 480px) */
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
 
-  h1 {
-    font-size: 26px;
-    margin-bottom: 10px;
-  }
-
+@media (min-width: 321px) and (max-width: 500px) {
   .hero {
-    padding: 15px 10px;
+    flex-direction: column;
+    padding: 5vh 6vw;
+    margin-top: 0;
+    max-height: 250vh;
   }
 
-  .hero-title {
-    margin: 30px auto 15px auto;
-    width: 95%;
+  .hero-content {
+    flex-direction: column;
+    width: 90vw;
+    padding: 0vh 4vw;
+    align-items: center;
     text-align: center;
   }
 
+  .text-content {
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .car-image img {
+    width: 80vw;
+    margin: 3vh auto;
+  }
+
   .hero-tagline {
-    font-size: 1.8rem;
-    margin: 15px auto;
+    /* Add styling if needed */
+  }
+
+  .hero-title {
     margin-left: 0;
     margin-right: 0;
+    width: 90vw;
+    margin-bottom: 2vh;
+    color: #ffffff;
   }
 
   .bold-black {
-    font-size: 2.2rem;
-    -webkit-text-stroke: 1.5px white;
-    font-family: "poppins , sans-serif";
-    line-height: 40px;
-  
-    /* Override the gradient for solid color on small screens */
-    background: none;
-    -webkit-background-clip: initial;
-    -webkit-text-fill-color: #fbfbfb; /* Example solid color */
-    color: #0B6BAA;
-  }
-
-  .trust-badge {
-    font-size: 12px;
-    padding: 6px 12px;
-  }
-
-  .car-image img {
+    font-size: clamp(1.8rem, 6vw, 2.7rem);
     width: 100%;
-    margin: 20px auto 0 auto;
-  }
-
-  .trip-buttons button {
-    display: flex;
-    flex-direction: row;
-    padding: 8px 14px;
-    font-size: 13px;
+    font-family: "Roboto Condensed", "Roboto Condensed Placeholder", sans-serif;
+  /* font-size: clamp(3vh, 4.5vw, 9vh); */
+  font-weight: 900;
+  background: linear-gradient(to bottom, #ffffff 5%, white 50%, white 45%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0.2vh white;
+  text-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.25);
+  /* width: 100vw; */
   }
 
   .contact-form {
-    padding: 15px 10px;
-    gap: 10px;
-    margin: 40px auto;
-
-  }
-
-  .contact-form input,
-  .contact-form select {
-    padding: 10px;
-    font-size: 13px;
-  }
-
-  .whatsapp-btn {
     flex-direction: column;
-    padding: 10px;
-    font-size: 13px;
+    width: 90vw;
+    padding: 4vh 3vw;
+    height: auto;
+    gap: 2vh;
+    margin-bottom: 8vh;
+    border-radius: 20px;
   }
 
-  .close-btn {
-    top: 10px;
-    right: 10px;
-    width: 25px;
-    height: 25px;
-    font-size: 16px;
-  }
-
-  .contact-numbers {
-    font-size: 13px;
-  }
-
-  .auth-buttons {
+  .home-container {
     flex-direction: column;
-    gap: 5px;
+    padding: 4vh 6vw;
+    text-align: center;
   }
 }
 
-@media (max-width: 321px) {
-  body {
-    font-size: 13px;
-  }
 
-  h1 {
-    font-size: 22px;
-    margin-bottom: 8px;
-  }
 
+@media (max-width: 320px) {
   .hero {
-    padding: 12px 8px;
+    flex-direction: column;
+    padding: 4vh 4vw;
+    margin-top: 0;
+        max-height: 173vh;
   }
 
-  .hero-title {
-    margin: 10px auto 5px auto;
+  .hero-content {
+    flex-direction: column;
+    width: 90vw;
+    padding: 2vh 2vw;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-content {
+    padding-right: 0;
     width: 100%;
-    padding: 0 10px;
-    text-align: center;
-    margin-left: -5px;
-  }
-
-  .hero-tagline {
-    font-size: 1.6rem;
-    margin: 10px auto;
-    text-align: center;
-  }
-
-  .bold-black {
-    font-size: 1.6rem;
-    -webkit-text-stroke: 0.3px white;
-  }
-
-  .trust-badge {
-    font-size: 11px;
-    padding: 5px 10px;
   }
 
   .car-image img {
-    width: 100%;
-    margin: 15px auto 0 auto;
+    width: 85vw;
+    margin: 2vh auto;
   }
 
-  .trip-buttons button {
-    flex-direction: row;
-    padding: 6px 12px;
-    font-size: 12px;
+  .hero-tagline{
+    
+  }
+  .hero-title {
+    margin-left: 0;
+    margin-right: 0;
+    width: 90vw;
+    margin-bottom: 2vh;
+  }
+
+  .bold-black {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    width: 100%;
   }
 
   .contact-form {
-    padding: 12px 8px;
-    gap: 8px;
-    margin: 30px auto;
-  }
-
-  .contact-form input,
-  .contact-form select {
-    padding: 8px;
-    font-size: 12px;
-  }
-
-  .whatsapp-btn {
     flex-direction: column;
-    padding: 8px;
-    font-size: 12px;
+    width: 90vw;
+    padding: 4vh 4vw;
+    height: auto;
+    gap: 2vh;
+    margin-bottom: 10vh;
   }
 
-  .close-btn {
-    top: 8px;
-    right: 8px;
-    width: 22px;
-    height: 22px;
-    font-size: 14px;
-  }
-
-  .contact-numbers {
-    font-size: 12px;
-  }
-
-  .auth-buttons {
+  .home-container {
     flex-direction: column;
-    gap: 4px;
+    padding: 4vh 5vw;
+    text-align: center;
   }
 }

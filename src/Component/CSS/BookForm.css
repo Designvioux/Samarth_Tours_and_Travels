@@ -16,24 +16,27 @@
     background: white;
     padding: 2rem;
     border-radius: 20px;
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     position: relative;
     text-align: center;
     animation: scaleIn 0.3s ease;
+   
   }
   
   /* Close Button */
   .close-btn {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    background-color: #046AAA;
+    top: 20px;
+    right: 20px;
+    background: #046AAA;
     color: white;
-    font-size: 1.5rem;
     border: none;
     border-radius: 50%;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
+    font-size: 18px;
   }
   .colomn-Drop{
     margin-right: -20px;
@@ -51,6 +54,9 @@
   .popup-form h2 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+    /* margin: 0 auto; */
+    justify-content: center;
+    text-align: center;
   }
   
   .popup-form p {
@@ -59,7 +65,7 @@
   }
   
   /* Input styles */
-  .popup-form input,
+  /* .popup-form input,
   .popup-form select {
     width: 100%;
     padding: 0.75rem;
@@ -69,13 +75,107 @@
     background: #f0f0f0;
     font-size: 1rem;
   }
-  
+   */
+   .Fullname{
+    width: 80%;
+    padding: 0.7vw;
+    margin: 0.1vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+ }
+ .Contactno{
+    width: 100%;
+    padding: 0.7vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+ }
+.Select{
+    width: 100%;
+    padding: 0.7vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+}
+.Book-Pickup{
+    width: 104%;
+    padding: 0.7vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+    
+}
+.DateTime{
+    width: 104%;
+    padding: 0.7vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+}
+.Book-dropLocation{
+    width: 104%;
+    padding: 0.7vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+}
+.Book-Dropdate{
+    width: 104%;
+    padding: 0.7vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+}
+.Book-PickupDate{
+   width: 104%;
+    padding: 0.7vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+}
+.Book-PickupTime{
+  width: 104%;
+    padding: 0.7vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+}
   /* Trip type buttons */
   .trip-buttons {
-    display: flex;
+    /* display: flex; */
+    margin: 0 auto;
     justify-content: center;
-    gap: 1rem;
+    text-align: center;
+    gap: 2rem;
     margin-bottom: 1rem;
+    /* margin-left: 130px; */
   }
   
   .trip-buttons button {
@@ -85,6 +185,9 @@
     background: white;
     cursor: pointer;
     font-weight: bold;
+    margin: 0 1%;
+    text-align: center;
+    justify-content: center;
   }
   
   .trip-buttons .selected {
@@ -115,7 +218,17 @@
     opacity: 0.5;
     cursor: not-allowed;
   }
+  h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+   
+  }
   
+  p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+  }
   /* Contact link */
   .contact-links {
     margin-top: 1rem;
@@ -136,7 +249,7 @@
   .row {
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin-top: 0.5rem;
   }
   
@@ -208,31 +321,292 @@
   text-align: left;
   margin-bottom: 0.25rem;
 }
-
-
-
-
-@media (max-width: 480px) {
+@media (min-width: 1025px) and (max-width: 1920px) {
   .popup-form {
-    width: 90%;
-    padding: 1.5rem;
+    padding: 3vh 3vw;
+    max-width: 34%;
+    max-height: 100vh;
+    border-radius: 20px;
   }
 
   .popup-form h2 {
-    font-size: 1.5rem;
+    font-size: 2.2vw;
   }
 
   .popup-form p {
-    font-size: 0.9rem;
+    font-size: 1.1vw;
+  }
+
+  .trip-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .trip-buttons button {
+    min-width: 30%;
+    font-size: 1.1rem;
+    padding: 0.6rem 2rem;
+  }
+
+  .row {
+    flex-direction: row;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .column,
+  .column-drop,
+  .colomn-Drop,
+  .column-Date {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .Fullname,
+  .Contactno,
+  .Select,
+  .Book-Pickup,
+  .DateTime,
+  .Book-dropLocation,
+  .Book-Dropdate,
+  .Book-PickupDate,
+  .Book-PickupTime {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .close-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    top: 20px;
+    right: 20px;
+  }
+
+  .send-email-btn,
+  .whatsapp-btn {
+    font-size: 1.1rem;
+    padding: 16px;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 1024px) {
+  .popup-form {
+    padding: 3vh 3vw;
+    max-width: 70%;
+    max-height: 100%;
+    border-radius: 20px;
+  }
+
+  .popup-form h2 {
+    font-size: 2rem;
+  }
+
+  .popup-form p {
+    font-size: 1.1rem;
+  }
+
+  .trip-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .trip-buttons button {
+    min-width: 35%;
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .row {
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .column,
+  .column-drop,
+  .colomn-Drop,
+  .column-Date {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .Fullname,
+  .Contactno,
+  .Select,
+  .Book-Pickup,
+  .DateTime,
+  .Book-dropLocation,
+  .Book-Dropdate,
+  .Book-PickupDate,
+  .Book-PickupTime {
+    width: 100%;
+    padding: 14px;
+    font-size: 2vw;
+  }
+
+  .close-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    top: 18px;
+    right: 18px;
+  }
+
+  .send-email-btn,
+  .whatsapp-btn {
+    font-size: 1.1rem;
+    padding: 14px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 769px) {
+  .popup-form {
+    padding: 3vh 2vw;
+    max-width: 80%;
+    max-height: 100%;
+    border-radius: 18px;
+  }
+
+  .popup-form h2 {
+    font-size: 6vw;
+  }
+
+  .popup-form p {
+    font-size: 1rem;
+  }
+
+  .trip-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .trip-buttons button {
+    width: auto;
+    min-width: 40%;
+    font-size: 1rem;
+    margin: 0.4rem;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .column,
+  .column-drop,
+  .colomn-Drop,
+  .column-Date {
+    width: 100%;
+    margin-right: 0;
+  
+  }
+
+  .Fullname,
+  .Contactno,
+  .Book-Pickup,
+  .DateTime,
+  .Book-dropLocation,
+  .Book-Dropdate,
+  .Book-PickupDate,
+  .Book-PickupTime {
+    width: 100%;
+    padding: 1vh;
+    font-size: 1rem;
+  }
+.Book-PickupDate {
+  width: 100%;
+  padding: 0.7vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
+  margin: 0.6vw 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #E7E7E7;
+  box-sizing: border-box;
+  color: #808080;
+
+  background-image: url('../../Images/choose_your_pickup_date.png'); /* Replace with your icon URL */
+  background-repeat: no-repeat;
+  background-size: 40vw 2.8vh; /* Size of icon */
+  background-position: 0.7vw center; /* Position icon inside input */
+  background-position-x: -4vw;
+
+}
+.Book-PickupTime{
+  width: 100%;
+  padding: 0.7vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
+  margin: 0.6vw 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #E7E7E7;
+  box-sizing: border-box;
+  color: #808080;
+
+  background-image: url('../../Images/choose_your_pickup_time.png'); /* Replace with your icon URL */
+  background-repeat: no-repeat;
+  background-size: 40vw 2.8vh; /* Size of icon */
+  background-position: 0.7vw center; /* Position icon inside input */
+  background-position-x: -4vw;
+}
+ .Book-Dropdate{
+  width: 100%;
+  padding: 0.7vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
+  margin: 0.6vw 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #E7E7E7;
+  box-sizing: border-box;
+  color: #808080;
+
+  background-image: url('../../Images/choose_your_drop_date.png'); /* Replace with your icon URL */
+  background-repeat: no-repeat;
+  background-size: 40vw 2.8vh; /* Size of icon */
+  background-position: 0.7vw center; /* Position icon inside input */
+  background-position-x: -4vw;
+  
+ }
+  .close-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+    top: 15px;
+    right: 15px;
+  }
+
+  .send-email-btn,
+  .whatsapp-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .popup-form {
+    padding: 1vh 1vw;
+    max-width: 95%;
+    border-radius: 15px;
+  }
+
+  .popup-form h2 {
+    font-size: 7vw;
+  }
+
+  .popup-form p {
+    font-size: 0.85rem;
   }
 
   .trip-buttons {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
   .trip-buttons button {
-    width: 100%;
+    width: 40%;
+    margin: 0.2vw 3vw;
+    font-size: 4vw;
   }
 
   .row {
@@ -240,107 +614,38 @@
     gap: 0.5rem;
   }
 
-  .whatsapp-btn,
-  .send-email-btn {
-    font-size: 0.95rem;
-    padding: 0.6rem;
+  .column, .column-drop, .colomn-Drop, .column-Date {
+    margin-right: 0;
+    width: 100%;
   }
 
-  .send-email-btn {
-    gap: 4vw;
+  .Fullname,
+  .Contactno,
+  .Select,
+  .Book-Pickup,
+  .DateTime,
+  .Book-dropLocation,
+  .Book-Dropdate,
+  .Book-PickupDate,
+  .Book-PickupTime {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
   }
 
   .close-btn {
-    font-size: 1.3rem;
-    top: 8px;
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+    top: 10px;
     right: 10px;
   }
 
-  .column,
-  .column-drop,
-  .colomn-Drop,
-  .column-Date {
-    margin-right: 0;
-    width: 100% !important;
-  }
-
-  .popup-form input,
-  .popup-form select {
-    font-size: 1rem !important;
-    padding: 0.75rem !important;
-    color: black;
-  }
-  .popup-form input::placeholder,
-  .popup-form select::placeholder {
-    font-size: 1rem !important;
-    color: #333 !important;
-    opacity: 1 !important;
-  }
-
-  
-
-
-
-}
-
-@media (max-width: 400px) {
-  .popup-form {
-    padding: 1.0rem;
-    width: 80%;
-  }
-
-  .popup-form h2 {
-    font-size: 1.3rem;
-  }
-
-  .close-btn {
-    font-size: 1.2rem;
-  }
-  .popup-form input,
-  .popup-form select {
-  
-    font-size: 1rem !important;
-    padding: 0.75rem !important;
-
-    width: 90%;
-  }
-
-  .popup-form input::placeholder,
-  .popup-form select::placeholder {
-    font-size: 1rem !important;
-    color: #333 !important;
-    opacity: 1 !important;
-  }
-  
-
-
-
-}
-
-@media (max-width: 321px) {
-  .popup-form {
-    padding: 1rem;
-  }
-
-  .popup-form h2 {
-    font-size: 1.1rem;
-  }
-
-  .popup-form p,
-  .contact-links {
-    font-size: 0.85rem;
-  }
-
-  .trip-buttons button {
+  .send-email-btn,
+  .whatsapp-btn {
     font-size: 0.9rem;
+    padding: 10px;
   }
-
-  .whatsapp-btn,
-  .send-email-btn {
-    font-size: 0.9rem;
-  }
-  
-
-
-
 }
+
+

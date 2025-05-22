@@ -1,7 +1,10 @@
-
+body{
+  font-family:"Roboto Condensed", "Roboto Condensed Placeholder", sans-serif;
+}
 .how-it-works {
     text-align: center;
     padding: 60px 20px;
+    
     background: #F5F8F7;
   }
   
@@ -19,6 +22,7 @@
     font-size: 1rem;
     color: #666;
     margin-bottom: 50px;
+  
   }
   
   .steps {
@@ -70,150 +74,175 @@
     font-size: 0.95rem;
     color: #666;
   }
-  
-
-  /* For devices 769px and below */
-@media (max-width: 769px) {
+@media (min-width: 1025px) and (max-width: 1920px) {
   .how-it-works {
-    padding: 40px 15px;
-    margin-left: 20px;
+    padding: 3% 3%;
+   
   }
 
   .how-it-works h2 {
-    font-size: 32px;
+    font-size: 4vw;
+    
   }
 
   .how-it-works .subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 40px;
+    font-size: 1.5vw;
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+   
   }
 
   .steps {
-    gap: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* gap: 8%; */
+    justify-content: center;
+  }
+
+  .step {
+    max-width: 20%;
+    margin: 0 auto;
+    margin-bottom: 4%;
+  }
+
+  .icon-wrapper {
+    width: 25%;
+    height: 30%;
+    font-size: 1vw;
   }
 
   .step h3 {
-    font-size: 1.1rem;
+    font-size: 1.2vw;
   }
 
   .step p {
-    font-size: 0.9rem;
+    font-size: 1vw;
   }
 }
 
-/* For devices 480px and below */
-@media (max-width: 480px) {
-  .how-it-works{
-margin-left: 20px;
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+  .how-it-works {
+    padding: 3% 5%;
+   
   }
+
   .how-it-works h2 {
-    font-size: 28px;
+    font-size: 4vw;
   }
 
   .how-it-works .subtitle {
-    font-size: 0.9rem;
-    margin-bottom: 30px;
+    font-size: 1.8vw;
+    margin-bottom: 8%;
+  }
+
+  .steps {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1vw;
+    justify-content: center;
+  }
+
+  .step {
+    max-width: 45%;
+    margin: 0 auto;
+  }
+
+  .icon-wrapper {
+    width: 20%;
+    height: 30%;
+    font-size: 2rem;
+  }
+
+  .step h3 {
+    font-size: 1.5rem;
+  }
+
+  .step p {
+    font-size: 1.2rem;
+  }
+}
+
+  @media (min-width: 321px) and (max-width: 769px) {
+  .how-it-works {
+    padding: 8% 6%;
+   
+  }
+
+  .how-it-works h2 {
+    font-size: 8vw;
+  }
+
+  .how-it-works .subtitle {
+    font-size: 4.5vw;
+    margin-bottom: 8vw;
   }
 
   .steps {
     flex-direction: column;
-    gap: 25px;
-  }
-
-  .icon-wrapper {
-    width: 70px;
-    height: 70px;
-    font-size: 2.5rem;
-  }
-  .icon-wrapper i{
-    font-size: 30px;
+    gap: 8vw;
   }
 
   .step {
-    max-width: 100%;
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+
+  .icon-wrapper {
+    width: 18vw;
+    height: 18vw;
+    font-size: 5vw;
   }
 
   .step h3 {
-    font-size: 1rem;
+    font-size: 5.5vw;
   }
 
   .step p {
-    font-size: 0.88rem;
+    font-size: 4.2vw;
   }
 }
 
 
-/* For devices 400px and below */
-@media (max-width: 400px) {
+ @media (max-width: 320px) {
   .how-it-works {
-    margin-left: 15px;
+    padding: 5% 5%;
+   
   }
 
   .how-it-works h2 {
-    font-size: 24px;
+    font-size: 10vw;
   }
 
   .how-it-works .subtitle {
-    font-size: 0.85rem;
-    margin-bottom: 25px;
+    font-size: 6vw;
+    margin-bottom: 10%;
   }
 
   .steps {
     flex-direction: column;
-    gap: 20px;
+    gap: 10vw;
   }
 
-  .icon-wrapper {
-    width: 80px;
-    height: 80px;
-    font-size: 2.4rem;
-  }
-  .icon-wrapper i{
-    font-size: 30px;
-  }
   .step {
-    max-width: 100%;
-  }
-
-  .step h3 {
-    font-size: 0.95rem;
-  }
-
-  .step p {
-    font-size: 0.82rem;
-  }
-}
-
-
-/* For very small devices 321px and below */
-@media (max-width: 321px) {
-  .how-it-works {
-    padding: 30px 10px;
-    margin-left: 20px;
-  }
-
-  .how-it-works h2 {
-    font-size: 24px;
-  }
-
-  .how-it-works .subtitle {
-    font-size: 0.85rem;
-    margin-bottom: 20px;
+    max-width: 100vw;
   }
 
   .icon-wrapper {
-    width: 60px;
-    height: 60px;
-    font-size: 1.6rem;
+    width: 20vw;
+    height: 20vw;
+    font-size: 1.5vw;
   }
-  .icon-wrapper i{
-    font-size: 20px;
-  }
+
   .step h3 {
-    font-size: 0.95rem;
+    font-size: 6vw;
   }
 
   .step p {
-    font-size: 0.85rem;
+    font-size: 5vw;
+    
   }
 }

@@ -10,7 +10,8 @@ const BookingPopup = ({ isOpen, onClose, selectedCar }) => {
       fullName: "",
       contactNumber: "",
       selectedCar: selectedCar || "",
-      pickupDateTime: "",
+      pickupDate: "",
+      pickupTime: "",
       pickUpLocation: "",
       dropLocation: "",
       dropDate: "",
@@ -22,7 +23,8 @@ const BookingPopup = ({ isOpen, onClose, selectedCar }) => {
         .matches(/^[0-9]{10}$/, "Enter a valid 10-digit number")
         .required("Required"),
       selectedCar: Yup.string().required("Required"),
-      pickupDateTime: Yup.string().required("Required"),
+      pickupDate: Yup.string().required("Required"),
+      pickupTime: Yup.string().required("Required"),
       pickUpLocation: Yup.string().required("Required"),
       dropLocation: Yup.string().required("Required"),
       dropDate: Yup.string().required("Required"),
@@ -34,17 +36,22 @@ const BookingPopup = ({ isOpen, onClose, selectedCar }) => {
           fullName,
           contactNumber,
           selectedCar,
-          pickupDateTime,
+          pickupDate,
+          pickupTime,
           pickUpLocation,
           dropLocation,
           dropDate,
         } = values;
 
-        const pickupDate = new Date(pickupDateTime);
-const formattedDateTime = `${pickupDate.getDate().toString().padStart(2, '0')}/${(pickupDate.getMonth() + 1)
-  .toString()
-  .padStart(2, '0')}/${pickupDate.getFullYear()} ${pickupDate.getHours().toString().padStart(2, '0')}:${pickupDate.getMinutes().toString().padStart(2, '0')}`;
-
+        const pickupDateTime = new Date(`${pickupDate}T${pickupTime}`);
+        const formattedDateTime = pickupDateTime.toLocaleString("en-IN", {
+  hour12: true,
+  day: "2-digit",
+  month: "2-digit",
+  year: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+});
 
         const message = `Hello,
 
@@ -98,7 +105,6 @@ ${fullName}`;
           &times;
         </button>
         <h2>Book Your Car</h2>
-        {/* <p>Please select your trip type and fill the details or call us directly at the number below</p> */}
 
         <div className="trip-buttons">
           <button
@@ -119,24 +125,28 @@ ${fullName}`;
           <input
             type="text"
             placeholder="Enter your Full name"
+            className="Fullname"
             {...formik.getFieldProps("fullName")}
           />
           <input
             type="tel"
+            className="Contactno"
             placeholder="Enter Contact Number"
             {...formik.getFieldProps("contactNumber")}
           />
           <input
             type="text"
+            className="Select"
             placeholder="Car Name (e.g., Hyundai Aura)"
             {...formik.getFieldProps("selectedCar")}
           />
 
-          <div className="row">
+          {/* <div className="row"> */}
             <div className="column">
               <input
                 type="text"
                 name="pickUpLocation"
+                className="Book-Pickup"
                 placeholder="Enter Your Pick Up Location"
                 {...formik.getFieldProps("pickUpLocation")}
               />
@@ -145,23 +155,38 @@ ${fullName}`;
               )}
             </div>
             <div className="column">
-              
               <input
-                type="datetime-local"
-                name="pickupDateTime"
-                {...formik.getFieldProps("pickupDateTime")}
+                type="date"
+                name="pickupDate"
+                className="Book-PickupDate"
+                {...formik.getFieldProps("pickupDate")}
               />
-              {formik.touched.pickupDateTime && formik.errors.pickupDateTime && (
-                <span className="error">{formik.errors.pickupDateTime}</span>
+              {formik.touched.pickupDate && formik.errors.pickupDate && (
+                <span className="error">{formik.errors.pickupDate}</span>
               )}
             </div>
-          </div>
+            <div className="column">
+              <input
+                type="time"
+                name="pickupTime"
+                
+                className="Book-PickupTime"
+                step="60"
+                {...formik.getFieldProps("pickupTime")}
+              />
+              {formik.touched.pickupTime && formik.errors.pickupTime && (
+                <span className="error">{formik.errors.pickupTime}</span>
+              )}
+            </div>
+          {/* </div> */}
 
-          <div className="row">
-            <div className="column-drop">
+          {/* <div className="row"> */}
+            <div className="column">
               <input
                 type="text"
                 name="dropLocation"
+                class="dropLocation"
+                className="Book-dropLocation"
                 placeholder="Enter Your Drop Location"
                 {...formik.getFieldProps("dropLocation")}
               />
@@ -169,18 +194,19 @@ ${fullName}`;
                 <span className="error">{formik.errors.dropLocation}</span>
               )}
             </div>
-            <div className="column-Date">
+            <div className="column">
               <input
                 type="date"
                 name="dropDate"
-                className="Date"
+                class="DropDate"
+                className="Book-Dropdate"
                 {...formik.getFieldProps("dropDate")}
               />
               {formik.touched.dropDate && formik.errors.dropDate && (
                 <span className="error">{formik.errors.dropDate}</span>
               )}
             </div>
-          </div>
+          {/* </div> */}
 
           <div className="send-btn">
             <button

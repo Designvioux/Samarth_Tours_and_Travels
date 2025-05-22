@@ -7,18 +7,17 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
-          <img src = {logo} className="logo" alt="samarth Tours"></img>
+          <img src = {logo} className="footer-logo" alt="samarth Tours"></img>
           <h3 className="book-span">Book your car anytime anywhere !</h3>
           <h4>Address:</h4>
           <p>Gaon Bhag , 6 ,Gujari Peth,</p>
           <p>Ichalkaranji, Maharashtra 416115</p>
-          
-
         </div>
         <div className="footer-right">
           <h3>Quick Link</h3>
           <ul className="footer-linkss">
             <a href="/" className='navbarr'>Home</a> 
+            <a href="/about" className='navbarr'>About</a> 
             <Link to ="/cars" className="navbarr">Cars</Link>
             <Link to="/ContactForm" className="navbarr">Contact</Link>
             

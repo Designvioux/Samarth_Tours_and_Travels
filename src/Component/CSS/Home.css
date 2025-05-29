@@ -152,7 +152,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 2vw;
-  height: clamp(42vw, 68vh, 70vh);
+  height: clamp(39vw, 68vh, 70vh);
 }
 
 

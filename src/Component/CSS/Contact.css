@@ -9,8 +9,6 @@ body{
 position: relative;
 margin-top: 0px;
 gap: 1px;
-
-
 }
 
 
@@ -105,7 +103,7 @@ color: white;
     font-size: 2vw;
     color: #000000;
     font-weight: 700;
-   
+
 }
 
 .contact-container.popup-form p {
@@ -187,7 +185,7 @@ color: white;
     background-color: #E7E7E7;
     box-sizing: border-box;
     color: #808080;
-    
+    gap: 10px;
 }
 .Pickup::placeholder {
   font-size: clamp(12px, 1vw, 18px);
@@ -230,6 +228,7 @@ color: white;
 .PickupDate::placeholder {
   font-size: clamp(12px, 1vw, 18px);
 }
+
 .PickupTime{
   width: 100%;
     padding: 0.7vw;
@@ -257,6 +256,23 @@ color: white;
 
 .DropDate::placeholder {
   font-size: clamp(12px, 1vw, 18px);
+}
+.ReturnDate,
+.ReturnLocation{
+   width: 100%;
+    padding: 0.7vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+}
+.Pickup-LD{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .contact-container .example-full-width {
     width: 100%;
@@ -478,7 +494,7 @@ input[type="datetime-local"] {
   .contact-container .column {
     width: 100%;
   }
-
+   
   .Fullname,
   .Contactno,
   .Select,
@@ -493,7 +509,7 @@ input[type="datetime-local"] {
   }
  .PickupDate{
   width: 100%;
-  padding: 0.7vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
+  padding: 4.8vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
   margin: 0.6vw 0;
   border: none;
   border-radius: 5px;
@@ -509,7 +525,7 @@ input[type="datetime-local"] {
  }
  .PickupTime{
   width: 100%;
-  padding: 0.7vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
+  padding: 4.8vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
   margin: 0.6vw 0;
   border: none;
   border-radius: 5px;
@@ -525,7 +541,7 @@ input[type="datetime-local"] {
  }
  .Dropdate{
   width: 100%;
-  padding: 0.7vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
+  padding: 4.8vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
   margin: 0.6vw 0;
   border: none;
   border-radius: 5px;
@@ -539,6 +555,7 @@ input[type="datetime-local"] {
   background-position: 0.7vw center; /* Position icon inside input */
   background-position-x: -4vw;
  }
+ 
   .contact-container .send-email-btn {
     font-size: 15px;
     padding: 12px;

@@ -1,12 +1,10 @@
 .about-container {
   width: 100%;
   font-family:"Roboto Condensed", "Roboto Condensed Placeholder", sans-serif;
-;
   color: #1d1d1d;
-margin-top: -4%;
+  margin-top: -4%;
 }
 .about-hero {
-  
   height: 60vh;
   display: flex;
   align-items: center;
@@ -145,7 +143,7 @@ margin-top: -4%;
   }
 
   .hero-contentt h1 {
-    font-size: 3vw; /* Clean, proportional size for large displays */
+    font-size: 3vw;
     margin: 5vh auto;
     display: flex;
     align-items: center;
@@ -169,7 +167,7 @@ margin-top: -4%;
   .offer-item, 
   .offer-image {
     width: 30%;
-    max-width: 30%; /* Three per row, evenly spaced */
+    max-width: 30%;
   }
 
   .offer-item1 h3,
@@ -247,7 +245,7 @@ margin-top: -4%;
   .offer-item, 
   .offer-image {
     width: 32%;
-    max-width: 32%; /* Adjusted for better spacing */
+    max-width: 32%;
   }
 
   .offer-item1 h3,
@@ -272,15 +270,13 @@ margin-top: -4%;
   .offer-image2 img,
   .offer-image3 img {
     width: 100%;
-    max-width: 280px; /* Balanced for layout at smaller widths */
+    max-width: 280px;
     height: 40vh;
     margin: 2vh 0 0 0;
     display: block;
     border-radius: 50%;
     object-fit: cover;
   }
-
-  /* Custom height tweaks if needed */
   .offer-image2 img {
     height: 43vh;
   }
@@ -288,7 +284,7 @@ margin-top: -4%;
 
 @media (min-width: 770px) and (max-width: 1024px) {
   .about-hero {
-    flex-direction: row; /* More horizontal space available */
+    flex-direction: row; 
     padding: 6vh 10vw;
     height: auto;
     text-align: left;
@@ -297,7 +293,7 @@ margin-top: -4%;
   }
 
   .hero-contentt h1 {
-    font-size: 4vw; /* Scaled for medium screens */
+    font-size: 4vw;
     margin-top: 0;
   }
 
@@ -317,7 +313,7 @@ margin-top: -4%;
 
   .offer-item, 
   .offer-image {
-    width: 48%; /* Two items per row on medium screens */
+    width: 48%;
     max-width: 48%;
   }
 
@@ -361,7 +357,7 @@ margin-top: -4%;
   }
 
   .hero-contentt h1 {
-    font-size: 6vw; /* fluid font size */
+    font-size: 6vw;
     margin-top: 0;
   }
 
@@ -400,15 +396,12 @@ margin-top: -4%;
     padding-left: 2rem;
     width: 100%;
   }
-
-  /* Make images responsive: max width 100%, height auto to keep aspect ratio */
   .offer-image1 img,
   .offer-image2 img,
   .offer-image3 img {
-    width: 100%;     /* fill container width */
-    max-width: 400px; /* max width to avoid too large on bigger screens */
-    height: auto;    /* maintain aspect ratio */
-    margin: 2vh auto 0 auto; /* center horizontally, some top margin */
+    width: 100%;
+    max-width: 400px;
+    margin: 2vh auto 0 auto;
     display: block;
     border-radius: 70%;
     object-fit: cover;

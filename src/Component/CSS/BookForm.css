@@ -21,7 +21,6 @@
     position: relative;
     text-align: center;
     animation: scaleIn 0.3s ease;
-   
   }
   
   /* Close Button */
@@ -54,7 +53,6 @@
   .popup-form h2 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
-    /* margin: 0 auto; */
     justify-content: center;
     text-align: center;
   }
@@ -63,19 +61,6 @@
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
   }
-  
-  /* Input styles */
-  /* .popup-form input,
-  .popup-form select {
-    width: 100%;
-    padding: 0.75rem;
-    margin: 0.4rem 0;
-    border: none;
-    border-radius: 10px;
-    background: #f0f0f0;
-    font-size: 1rem;
-  }
-   */
    .Fullname{
     width: 80%;
     padding: 0.7vw;
@@ -98,13 +83,14 @@
  }
 .Select{
     width: 100%;
-    padding: 0.7vw;
+    padding: 2vw;
     margin: 0.6vw 0;
     border: none;
     border-radius: 5px;
     background-color: #E7E7E7;
     box-sizing: border-box;
     color: #808080;
+  
 }
 .Book-Pickup{
     width: 104%;
@@ -169,13 +155,11 @@
 }
   /* Trip type buttons */
   .trip-buttons {
-    /* display: flex; */
     margin: 0 auto;
     justify-content: center;
     text-align: center;
     gap: 2rem;
     margin-bottom: 1rem;
-    /* margin-left: 130px; */
   }
   
   .trip-buttons button {
@@ -195,7 +179,11 @@
     color: white;
     border-color: #000;
   }
-  
+  .Book-Pickup-LD{
+    display: flex;
+  flex-direction: row;
+  gap: 10px;
+  }
   /* Submit button */
   .whatsapp-btn {
     background: white;
@@ -309,8 +297,8 @@
 
 .popup-form input::placeholder,
 .popup-form select::placeholder {
-  color: #555 !important;   /* Darker text for visibility */
-  font-size: 1rem !important;
+  color: #555 !important;
+  font-size: 0.7rem !important;
   opacity: 1 !important;
 }
 
@@ -490,6 +478,7 @@
     min-width: 40%;
     font-size: 1rem;
     margin: 0.4rem;
+    border: 1px solid black;
   }
 
   .row {
@@ -520,7 +509,7 @@
   }
 .Book-PickupDate {
   width: 100%;
-  padding: 0.7vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
+  padding: 3vw 2.5vw 0.7vw 2.5vw;
   margin: 0.6vw 0;
   border: none;
   border-radius: 5px;
@@ -528,16 +517,16 @@
   box-sizing: border-box;
   color: #808080;
 
-  background-image: url('../../Images/choose_your_pickup_date.png'); /* Replace with your icon URL */
+  background-image: url('../../Images/choose_your_pickup_date.png');
   background-repeat: no-repeat;
-  background-size: 40vw 2.8vh; /* Size of icon */
-  background-position: 0.7vw center; /* Position icon inside input */
+  background-size: 40vw 2.8vh;
+  background-position: 0.7vw center;
   background-position-x: -4vw;
 
 }
 .Book-PickupTime{
   width: 100%;
-  padding: 0.7vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
+  padding: 3vw 2.5vw 0.7vw 2.5vw;
   margin: 0.6vw 0;
   border: none;
   border-radius: 5px;
@@ -545,15 +534,15 @@
   box-sizing: border-box;
   color: #808080;
 
-  background-image: url('../../Images/choose_your_pickup_time.png'); /* Replace with your icon URL */
+  background-image: url('../../Images/choose_your_pickup_time.png');
   background-repeat: no-repeat;
-  background-size: 40vw 2.8vh; /* Size of icon */
-  background-position: 0.7vw center; /* Position icon inside input */
+  background-size: 40vw 2.8vh;
+  background-position: 0.7vw center;
   background-position-x: -4vw;
 }
  .Book-Dropdate{
   width: 100%;
-  padding: 0.7vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
+  padding: 3vw 2.5vw 0.7vw 2.5vw;
   margin: 0.6vw 0;
   border: none;
   border-radius: 5px;
@@ -561,13 +550,23 @@
   box-sizing: border-box;
   color: #808080;
 
-  background-image: url('../../Images/choose_your_drop_date.png'); /* Replace with your icon URL */
+  background-image: url('../../Images/choose_your_drop_date.png');
   background-repeat: no-repeat;
-  background-size: 40vw 2.8vh; /* Size of icon */
-  background-position: 0.7vw center; /* Position icon inside input */
+  background-size: 40vw 2.8vh;
+  background-position: 0.7vw center;
   background-position-x: -4vw;
-  
  }
+ .Book-Select{
+  width: 100%;
+    padding: 3vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+ }
+
   .close-btn {
     width: 28px;
     height: 28px;

@@ -128,7 +128,7 @@ body {
   text-decoration: none;
 }
 
-.footer-bottom a:hover {
+.footer-bottom .Designvio:hover{
   color: #FFC300;
 }
 
@@ -276,7 +276,7 @@ body {
     text-decoration: none;
   }
 
-  .footer-bottom a:hover {
+  .footer-bottom .Designvio:hover {
     color: #FFC300;
   }
 
@@ -432,7 +432,7 @@ body {
     text-decoration: none;
   }
 
-  .footer-bottom a:hover {
+  .footer-bottom .Designvio:hover {
     color: #FFC300;
   }
 
@@ -593,7 +593,7 @@ body {
     text-decoration: none;
   }
 
-  .footer-bottom a:hover {
+  .footer-bottom .Designvio:hover {
     color: #FFC300;
   }
 

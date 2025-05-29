@@ -37,8 +37,8 @@ const Footer = () => {
       <hr></hr>
 
       <div className="footer-bottom">
-        <p>© 2025 All rights reserved for Samarth Tours and Travels  </p>
-       <a href="https://designvio.framer.ai/" target="_blank" rel="noopener noreferrer"><p>© 2025 Designed by Designvio Pvt.Ltd </p></a> 
+        <p >© 2025 All rights reserved for Samarth Tours and Travels  </p>
+       <a href="https://designvio.in/" target="_blank" rel="noopener noreferrer"><p className="Designvio">© 2025 Designed by Designvio Pvt.Ltd </p></a> 
       </div>
     </footer>
   );

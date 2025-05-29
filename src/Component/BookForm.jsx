@@ -157,7 +157,7 @@ ${fullName}`;
           />
           <input
             type="text"
-            className="Book-Select"
+            className="Select"
             placeholder="Car Name (e.g., Hyundai Aura)"
             {...formik.getFieldProps("selectedCar")}
           />

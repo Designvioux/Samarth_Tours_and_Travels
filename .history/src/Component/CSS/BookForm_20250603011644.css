@@ -618,7 +618,7 @@
   background-position-x: -4vw;
 
 }
-/* .Book-PickupTime {
+.Book-PickupTime {
     width: 100%;
     padding: 3vw 2.5vw 0.7vw 2.5vw;
     margin: 0.6vw 0;
@@ -632,7 +632,7 @@
     background-size: 40vw 2.8vh;
     background-position: 0.7vw center;
     background-position-x: -4vw;
-  } */
+  }
 
   /* This will override when time is selected */
 
@@ -692,16 +692,6 @@
 
   .popup-form p {
     font-size: 0.85rem;
-  }
-
-  .Book-PickupTime {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
-  
-  .time-placeholder {
-    left: 10px;
-    font-size: 12px;
   }
 
   .trip-buttons {

@@ -13,7 +13,9 @@ const BookingForm = () => {
   ];
 const [time,setTime]=useState("");
 
-
+const handleChange = (e) => {
+  setTime(e.target.value);
+};
   const formatDate = (dateStr) => {
     const date = new Date(dateStr);
     const day = String(date.getDate()).padStart(2, "0");
@@ -197,22 +199,22 @@ ${values.fullName}`;
               {formik.touched.selectedCar && formik.errors.selectedCar && (
                 <span className="error">{formik.errors.selectedCar}</span>
               )}
-<div className="column">
-  <div className="time-input-wrapper">
+ <div className="column">
+ <div className="time-input-container">
     <input
       type="time"
       name="pickupTime"
-      className={`PickupTime ${formik.values.pickupTime ? 'has-value' : ''}`}
+      className="PickupTime"
+      onChange={handleChange}
       {...formik.getFieldProps("pickupTime")}
     />
-    {!formik.values.pickupTime && (
+    {!time && (
       <span className="time-placeholder">Select Pick Up Time</span>
     )}
-  </div>
-  {formik.touched.pickupTime && formik.errors.pickupTime && (
-    <span className="error">{formik.errors.pickupTime}</span>
-  )}
-</div>
+                {formik.touched.pickupTime && formik.errors.pickupTime && (
+                  <span className="error">{formik.errors.pickupTime}</span>
+                )}
+              </div>
               <div className="Pickup-LD">
               <div className="column">
                 <input

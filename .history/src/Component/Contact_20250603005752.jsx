@@ -11,7 +11,7 @@ const BookingForm = () => {
     "Tavera", "Ertiga", "Kia Carens", "Innova", "Innova Crysta",
     "17STR Tempo Traveller", "21STR Tempo Traveller", "26STR Tempo Traveller", "32STR Tempo Traveller"
   ];
-const [time,setTime]=useState("");
+
 
 
   const formatDate = (dateStr) => {
@@ -202,12 +202,12 @@ ${values.fullName}`;
     <input
       type="time"
       name="pickupTime"
-      className={`PickupTime ${formik.values.pickupTime ? 'has-value' : ''}`}
+      className={`PickupTime ${time ? "has-value" : ""}`}
+      onChange={handleChange}
+      placeholder=" "
       {...formik.getFieldProps("pickupTime")}
     />
-    {!formik.values.pickupTime && (
-      <span className="time-placeholder">Select Pick Up Time</span>
-    )}
+    {!time && <span className="time-placeholder">Select Pick Up Time</span>}
   </div>
   {formik.touched.pickupTime && formik.errors.pickupTime && (
     <span className="error">{formik.errors.pickupTime}</span>

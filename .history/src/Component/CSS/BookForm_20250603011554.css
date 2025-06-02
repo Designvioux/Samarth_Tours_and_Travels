@@ -548,11 +548,6 @@
     font-size: 13px;
   }
 
-  .Book-PickupTime.time-selected {
-    background-image: none !important;
-    padding: 0.7vw 2.5vw !important;
-  }
-
   .popup-form h2 {
     font-size: 6vw;
   }
@@ -618,7 +613,7 @@
   background-position-x: -4vw;
 
 }
-/* .Book-PickupTime {
+.Book-PickupTime {
     width: 100%;
     padding: 3vw 2.5vw 0.7vw 2.5vw;
     margin: 0.6vw 0;
@@ -627,14 +622,18 @@
     background-color: #E7E7E7;
     box-sizing: border-box;
     color: #808080;
-    background-image: url('../../Images/choose_your_pickup_time.png'); 
+    /* background-image: url('../../Images/choose_your_pickup_time.png'); */
     background-repeat: no-repeat;
     background-size: 40vw 2.8vh;
     background-position: 0.7vw center;
     background-position-x: -4vw;
-  } */
+  }
 
   /* This will override when time is selected */
+  .Book-PickupTime.time-selected {
+    background-image: none !important;
+    padding: 0.7vw 2.5vw !important;
+  }
 
 
  .Book-Dropdate{
@@ -692,16 +691,6 @@
 
   .popup-form p {
     font-size: 0.85rem;
-  }
-
-  .Book-PickupTime {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
-  
-  .time-placeholder {
-    left: 10px;
-    font-size: 12px;
   }
 
   .trip-buttons {

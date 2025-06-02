@@ -164,23 +164,18 @@ ${fullName}`;
             placeholder="Car Name (e.g., Hyundai Aura)"
             {...formik.getFieldProps("selectedCar")}
           />
-<div className="column">
-  <div className="time-input-wrapper">
-    <input
-      type="time"
-      name="pickupTime"
-      className={`Book-PickupTime ${formik.values.pickupTime ? 'time-selected' : ''}`}
-      step="60"
-      {...formik.getFieldProps("pickupTime")}
-    />
-    {!formik.values.pickupTime && (
-      <span className="time-placeholder">Select Pick Up Time</span>
-    )}
-  </div>
-  {formik.touched.pickupTime && formik.errors.pickupTime && (
-    <span className="error">{formik.errors.pickupTime}</span>
-  )}
-</div>
+ <div className="column">
+           <input
+  type="time"
+  name="pickupTime"
+  className={`Book-PickupTime ${formik.values.pickupTime ? 'time-selected' : ''}`}
+  step="60"
+  {...formik.getFieldProps("pickupTime")}
+/>
+            {/* {formik.touched.pickupTime && formik.errors.pickupTime && (
+              <span className="error">{formik.errors.pickupTime}</span>
+            )} */}
+          </div>
           <div className="Book-Pickup-LD">
           <div className="column">
             <input

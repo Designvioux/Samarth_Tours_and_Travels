@@ -694,16 +694,8 @@
     font-size: 0.85rem;
   }
 
-  .Book-PickupTime {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
-  
-  .time-placeholder {
-    left: 10px;
-    font-size: 12px;
-  }
 
+  
   .trip-buttons {
     flex-direction: column;
     gap: 1rem;

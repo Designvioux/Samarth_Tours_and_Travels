@@ -303,7 +303,7 @@ color: white;
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: #808080; /* Your placeholder color */
+  color: #808080;; /* Your placeholder color */
   pointer-events: none;
   z-index: 5;
   font-size: clamp(12px, 1vw, 18px);

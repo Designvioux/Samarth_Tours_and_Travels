@@ -265,12 +265,12 @@ color: white;
 }
  */
 
+
  .time-input-wrapper {
   position: relative;
   width: 100%;
 }
 
-/* Base Input Styles */
 .PickupTime {
   width: 100%;
   padding: 0.7vw;
@@ -279,36 +279,41 @@ color: white;
   border-radius: 5px;
   background-color: #E7E7E7;
   box-sizing: border-box;
+  color: #808080;
   position: relative;
   z-index: 2;
-  color: transparent; /* Hide default text initially */
 }
 
-/* Show colored text when time is selected */
-.PickupTime.has-value {
-  color: #808080; /* Visible time text color */
-}
-
-/* Hide the browser's default --:-- placeholder */
+/* Hide the default --:-- placeholder */
+.PickupTime::-webkit-datetime-edit-ampm-field,
+.PickupTime::-webkit-datetime-edit-hour-field,
+.PickupTime::-webkit-datetime-edit-minute-field,
+.PickupTime::-webkit-datetime-edit-second-field,
+.PickupTime::-webkit-datetime-edit-millisecond-field,
+.PickupTime::-webkit-datetime-edit-day-field,
+.PickupTime::-webkit-datetime-edit-month-field,
+.PickupTime::-webkit-datetime-edit-year-field,
 .PickupTime::-webkit-datetime-edit {
   color: transparent;
-}
-.PickupTime.has-value::-webkit-datetime-edit {
-  color: #808080; /* Match your text color */
+  position: relative;
 }
 
-/* Custom Placeholder */
+.PickupTime:focus::-webkit-datetime-edit {
+  color: #808080 !important;
+}
+
+/* Custom placeholder */
 .time-placeholder {
   position: absolute;
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: #808080; /* Your placeholder color */
+  color: #7a7a7a;
   pointer-events: none;
-  z-index: 5;
+  z-index: 1;
   font-size: clamp(12px, 1vw, 18px);
 }
- 
+
 
 
 /* When time has a value (no background) */

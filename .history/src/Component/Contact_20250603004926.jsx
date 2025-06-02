@@ -13,7 +13,11 @@ const BookingForm = () => {
   ];
 const [time,setTime]=useState("");
 
-
+const handleChange = (e) => {
+  const value = e.target.value;
+  setTime(value); // Update local state
+  formik.setFieldValue("pickupTime", value); // Update Formik's state
+};
   const formatDate = (dateStr) => {
     const date = new Date(dateStr);
     const day = String(date.getDate()).padStart(2, "0");
@@ -202,10 +206,11 @@ ${values.fullName}`;
     <input
       type="time"
       name="pickupTime"
-      className={`PickupTime ${formik.values.pickupTime ? 'has-value' : ''}`}
+      className={`PickupTime ${time ? 'has-value' : ''}`}
+      onChange={handleChange}
       {...formik.getFieldProps("pickupTime")}
     />
-    {!formik.values.pickupTime && (
+    {!time && (
       <span className="time-placeholder">Select Pick Up Time</span>
     )}
   </div>

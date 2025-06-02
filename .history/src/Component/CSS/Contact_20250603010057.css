@@ -11,7 +11,7 @@ margin-top: 0px;
 gap: 1px;
 max-height:100vh;
 height: auto;
-width: 35vw;
+/* width: 35vw; */
 }
 .contact-container h2{
     /* align-items: center;
@@ -246,7 +246,7 @@ color: white;
 } */
 
 
-/* 
+
 .PickupTime{
   width: 100%;
   padding: 0.7vw;
@@ -257,20 +257,25 @@ color: white;
   box-sizing: border-box;
   color: #808080;
   
-   background-image: url('../../Images/choose_your_pickup_time.png'); 
+  /* background-image: url('../../Images/choose_your_pickup_time.png'); */
   background-repeat: no-repeat;
   background-size: 40vw 2.8vh;
   background-position: 0.7vw center;
   background-position-x: -4vw;
 }
- */
 
- .time-input-wrapper {
+
+
+
+input[type="time"]::before {
+  content: none !important;
+}
+
+.time-input-wrapper {
   position: relative;
   width: 100%;
 }
 
-/* Base Input Styles */
 .PickupTime {
   width: 100%;
   padding: 0.7vw;
@@ -279,38 +284,27 @@ color: white;
   border-radius: 5px;
   background-color: #E7E7E7;
   box-sizing: border-box;
+  color: transparent; /* Make the native text transparent */
   position: relative;
   z-index: 2;
-  color: transparent; /* Hide default text initially */
 }
 
-/* Show colored text when time is selected */
-.PickupTime.has-value {
-  color: #808080; /* Visible time text color */
+/* Show our custom placeholder when no time is selected */
+.PickupTime:not(:valid) + .time-placeholder {
+  display: block;
 }
 
-/* Hide the browser's default --:-- placeholder */
-.PickupTime::-webkit-datetime-edit {
-  color: transparent;
-}
-.PickupTime.has-value::-webkit-datetime-edit {
-  color: #808080; /* Match your text color */
-}
-
-/* Custom Placeholder */
 .time-placeholder {
   position: absolute;
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: #808080; /* Your placeholder color */
+  color: #7a7a7a;
   pointer-events: none;
-  z-index: 5;
+  z-index: 1;
   font-size: clamp(12px, 1vw, 18px);
+  display: none; /* Hidden by default */
 }
- 
-
-
 /* When time has a value (no background) */
 /* .PickupTime{
 background-image: none !important;
@@ -568,10 +562,6 @@ input[type="datetime-local"] {
       left: 3vw;
       font-size: 13px;
     }
-
-    .contact-container{
-      width: 80vw;
-    }
   
   .contact-container.popup-form {
     width: 92vw;
@@ -747,10 +737,6 @@ background-image: none !important;
     .time-placeholder {
       left: 10px;
       font-size: 12px;
-    }
-
-    .contact-container{
-      width: 80vw;
     }
 
   .contact-container.popup-form {

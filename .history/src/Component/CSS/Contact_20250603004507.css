@@ -11,7 +11,7 @@ margin-top: 0px;
 gap: 1px;
 max-height:100vh;
 height: auto;
-width: 35vw;
+/* width: 35vw; */
 }
 .contact-container h2{
     /* align-items: center;
@@ -246,7 +246,9 @@ color: white;
 } */
 
 
-/* 
+
+
+Remove the background image when time has a value
 .PickupTime{
   width: 100%;
   padding: 0.7vw;
@@ -257,58 +259,16 @@ color: white;
   box-sizing: border-box;
   color: #808080;
   
-   background-image: url('../../Images/choose_your_pickup_time.png'); 
+  /* background-image: url('../../Images/choose_your_pickup_time.png'); */
   background-repeat: no-repeat;
   background-size: 40vw 2.8vh;
   background-position: 0.7vw center;
   background-position-x: -4vw;
 }
- */
 
- .time-input-wrapper {
-  position: relative;
-  width: 100%;
-}
 
-/* Base Input Styles */
-.PickupTime {
-  width: 100%;
-  padding: 0.7vw;
-  margin: 0.6vw 0;
-  border: none;
-  border-radius: 5px;
-  background-color: #E7E7E7;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 2;
-  color: transparent; /* Hide default text initially */
-}
 
-/* Show colored text when time is selected */
-.PickupTime.has-value {
-  color: #808080; /* Visible time text color */
-}
 
-/* Hide the browser's default --:-- placeholder */
-.PickupTime::-webkit-datetime-edit {
-  color: transparent;
-}
-.PickupTime.has-value::-webkit-datetime-edit {
-  color: #808080; /* Match your text color */
-}
-
-/* Custom Placeholder */
-.time-placeholder {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #808080; /* Your placeholder color */
-  pointer-events: none;
-  z-index: 5;
-  font-size: clamp(12px, 1vw, 18px);
-}
- 
 
 
 /* When time has a value (no background) */
@@ -331,6 +291,36 @@ background-image: none !important;
 
 
 
+
+ .time-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.time-placeholder {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none;
+}
+
+input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hide the placeholder when input has a value */
+input[type="time"]:not(:empty) + .time-placeholder {
+  display: none;
+}
 
 
 
@@ -552,27 +542,6 @@ input[type="datetime-local"] {
     margin-bottom: 4px;
   }
   @media (min-width: 321px) and (max-width: 500px) {
-
-
-
-    .time-input-wrapper {
-      width: 100%;
-    }
-    
-    .PickupTime {
-      padding: 3vw;
-      font-size: 15px;
-    }
-    
-    .time-placeholder {
-      left: 3vw;
-      font-size: 13px;
-    }
-
-    .contact-container{
-      width: 80vw;
-    }
-  
   .contact-container.popup-form {
     width: 92vw;
     padding: 4vw;
@@ -736,23 +705,6 @@ background-image: none !important;
 }
 
   @media (max-width: 320px) {
-
-
-
-    .PickupTime {
-      padding: 10px;
-      font-size: 13px;
-    }
-    
-    .time-placeholder {
-      left: 10px;
-      font-size: 12px;
-    }
-
-    .contact-container{
-      width: 80vw;
-    }
-
   .contact-container.popup-form {
     width: 94vw;
     padding: 4vw;

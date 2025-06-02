@@ -202,8 +202,9 @@ ${values.fullName}`;
     <input
       type="time"
       name="pickupTime"
-      className={`PickupTime ${formik.values.pickupTime ? 'has-value' : ''}`}
+      className="PickupTime"
       {...formik.getFieldProps("pickupTime")}
+      onInput={(e) => e.target.setAttribute('data-has-value', !!e.target.value)}
     />
     {!formik.values.pickupTime && (
       <span className="time-placeholder">Select Pick Up Time</span>

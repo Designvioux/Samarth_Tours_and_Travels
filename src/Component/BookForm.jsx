@@ -179,7 +179,7 @@ ${fullName}`;
               type="text"
               name="pickUpLocation"
               className="Book-Pickup"
-              placeholder="Enter Your Pick Up Location"
+              placeholder="Enter Pick Up Location"
               {...formik.getFieldProps("pickUpLocation")}
             />
             {formik.touched.pickUpLocation && formik.errors.pickUpLocation && (

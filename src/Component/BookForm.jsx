@@ -117,6 +117,9 @@ ${fullName}`;
       formik.setFieldValue("returnLocation", "");
       formik.setFieldValue("returnDate", "");
     }
+
+
+    
   };
 
   return (
@@ -162,16 +165,16 @@ ${fullName}`;
             {...formik.getFieldProps("selectedCar")}
           />
  <div className="column">
-            <input
-              type="time"
-              name="pickupTime"
-              className="Book-PickupTime"
-              step="60"
-              {...formik.getFieldProps("pickupTime")}
-            />
-            {formik.touched.pickupTime && formik.errors.pickupTime && (
+           <input
+  type="time"
+  name="pickupTime"
+  className={`Book-PickupTime ${formik.values.pickupTime ? 'time-selected' : ''}`}
+  step="60"
+  {...formik.getFieldProps("pickupTime")}
+/>
+            {/* {formik.touched.pickupTime && formik.errors.pickupTime && (
               <span className="error">{formik.errors.pickupTime}</span>
-            )}
+            )} */}
           </div>
           <div className="Book-Pickup-LD">
           <div className="column">

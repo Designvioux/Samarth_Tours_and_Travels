@@ -230,7 +230,7 @@ color: white;
   font-size: clamp(12px, 1vw, 18px);
 }
 
-.PickupTime{
+/* .PickupTime{
   width: 100%;
     padding: 0.7vw;
     margin: 0.6vw 0;
@@ -243,7 +243,48 @@ color: white;
 .PickupTime::placeholder {
   font-size: clamp(12px, 1vw, 18px);
   
+} */
+
+
+
+
+/* Remove the background image when time has a value */
+.PickupTime{
+  width: 100%;
+  padding: 0.7vw;
+  margin: 0.6vw 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #E7E7E7;
+  box-sizing: border-box;
+  color: #808080;
+  
+  /* background-image: url('../../Images/choose_your_pickup_time.png'); */
+  background-repeat: no-repeat;
+  background-size: 40vw 2.8vh;
+  background-position: 0.7vw center;
+  background-position-x: -4vw;
 }
+
+/* When time has a value (no background) */
+.PickupTime{
+background-image: none !important;
+
+  width: 100%;
+  padding: 0.7vw;
+  margin: 0.6vw 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #E7E7E7;
+  box-sizing: border-box;
+  color: #808080;
+  background-image: none;
+}
+
+
+
+
+
 .Dropdate{
    width: 100%;
     padding: 0.7vw;
@@ -518,28 +559,36 @@ input[type="datetime-local"] {
   box-sizing: border-box;
   color: #808080;
 
-  background-image: url('../../Images/choose_your_pickup_date.png'); /* Replace with your icon URL */
+  /* background-image: url('../../Images/choose_your_pickup_date.png');  */
   background-repeat: no-repeat;
   background-size: 40vw 2.8vh; /* Size of icon */
   background-position: 0.7vw center; /* Position icon inside input */
   background-position-x: -4vw;
  }
- .PickupTime{
-  width: 100%;
-  padding: 4.8vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
-  margin: 0.6vw 0;
-  border: none;
-  border-radius: 5px;
-  background-color: #E7E7E7;
-  box-sizing: border-box;
-  color: #808080;
+  .PickupTime {
+    width: 100%;
+    /* padding: 4.8vw 2.5vw 0.7vw 2.5vw; */
+    padding: 1.2vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+    /* background-image: url('../../Images/choose_your_pickup_time.png'); */
+    background-repeat: no-repeat;
+    background-size: 40vw 2.8vh;
+    background-position: 0.7vw center;
+    background-position-x: -4vw;
+  }
 
-  background-image: url('../../Images/choose_your_pickup_time.png'); /* Replace with your icon URL */
-  background-repeat: no-repeat;
-  background-size: 40vw 2.8vh; /* Size of icon */
-  background-position: 0.7vw center; /* Position icon inside input */
-  background-position-x: -4vw;
- }
+
+  .PickupTime.no-bg {
+background-image: none !important;
+  
+    padding: 0.7vw; /* Adjust padding when no background */
+  }
+
  .Dropdate{
   width: 100%;
   padding: 4.8vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
@@ -550,7 +599,7 @@ input[type="datetime-local"] {
   box-sizing: border-box;
   color: #808080;
 
-  background-image: url('../../Images/choose_your_drop_date.png'); /* Replace with your icon URL */
+  /* background-image: url('../../Images/choose_your_drop_date.png');  */
   background-repeat: no-repeat;
   background-size: 40vw 2.8vh; /* Size of icon */
   background-position: 0.7vw center; /* Position icon inside input */
@@ -587,6 +636,32 @@ input[type="datetime-local"] {
   .ok-btn {
     padding: 18px;
   }
+  .ReturnDate{
+     width: 100%;
+    padding: 3vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+
+     /* background-image: url('../../Images/choose_your_drop_date.png');  */
+  background-repeat: no-repeat;
+  background-size: 40vw 2.8vh; /* Size of icon */
+  background-position: 0.7vw center; /* Position icon inside input */
+  background-position-x: -4vw;
+  }
+.ReturnLocation{
+   width: 100%;
+    padding: 3vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+}
 }
 
   @media (max-width: 320px) {

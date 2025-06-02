@@ -11,7 +11,11 @@ const BookingForm = () => {
     "Tavera", "Ertiga", "Kia Carens", "Innova", "Innova Crysta",
     "17STR Tempo Traveller", "21STR Tempo Traveller", "26STR Tempo Traveller", "32STR Tempo Traveller"
   ];
+const [time,setTime]=useState("");
 
+const handleChange = (e) => {
+  setTime(e.target.value);
+};
   const formatDate = (dateStr) => {
     const date = new Date(dateStr);
     const day = String(date.getDate()).padStart(2, "0");
@@ -200,6 +204,7 @@ ${values.fullName}`;
                   type="time"
                   name="pickupTime"
                   className="PickupTime"
+                  onChange={handleChange}
                   placeholder="Select Pick Up Time"
                   {...formik.getFieldProps("pickupTime")}
                 />

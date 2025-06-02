@@ -516,29 +516,36 @@
   box-sizing: border-box;
   color: #808080;
 
-  background-image: url('../../Images/choose_your_pickup_date.png');
+  /* background-image: url('../../Images/choose_your_pickup_date.png'); */
   background-repeat: no-repeat;
   background-size: 40vw 2.8vh;
   background-position: 0.7vw center;
   background-position-x: -4vw;
 
 }
-.Book-PickupTime{
-  width: 100%;
-  padding: 3vw 2.5vw 0.7vw 2.5vw;
-  margin: 0.6vw 0;
-  border: none;
-  border-radius: 5px;
-  background-color: #E7E7E7;
-  box-sizing: border-box;
-  color: #808080;
+.Book-PickupTime {
+    width: 100%;
+    padding: 3vw 2.5vw 0.7vw 2.5vw;
+    margin: 0.6vw 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    color: #808080;
+    /* background-image: url('../../Images/choose_your_pickup_time.png'); */
+    background-repeat: no-repeat;
+    background-size: 40vw 2.8vh;
+    background-position: 0.7vw center;
+    background-position-x: -4vw;
+  }
 
-  background-image: url('../../Images/choose_your_pickup_time.png');
-  background-repeat: no-repeat;
-  background-size: 40vw 2.8vh;
-  background-position: 0.7vw center;
-  background-position-x: -4vw;
-}
+  /* This will override when time is selected */
+  .Book-PickupTime.time-selected {
+    background-image: none !important;
+    padding: 0.7vw 2.5vw !important;
+  }
+
+
  .Book-Dropdate{
   width: 100%;
   padding: 3vw 2.5vw 0.7vw 2.5vw;
@@ -549,7 +556,7 @@
   box-sizing: border-box;
   color: #808080;
 
-  background-image: url('../../Images/choose_your_drop_date.png');
+  /* background-image: url('../../Images/choose_your_drop_date.png'); */
   background-repeat: no-repeat;
   background-size: 40vw 2.8vh;
   background-position: 0.7vw center;

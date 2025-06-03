@@ -342,7 +342,7 @@
 import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import "./CSS/Contact.css";
+import "./CSS/c";
 
 const BookingForm = () => {
   const [isConfirmationVisible, setIsConfirmationVisible] = useState(false);
@@ -513,7 +513,6 @@ ${values.fullName}`;
       }
     }
   };
-  
   return (
     <div className="heading">
       <div className="contact-container">

@@ -237,6 +237,7 @@ color: white;
   width: 100%;
 }
 
+/* Base Input Styles */
 .PickupTime {
   width: 100%;
   padding: 0.7vw;
@@ -313,7 +314,7 @@ background-image: none !important;
   box-sizing: border-box;
   color: transparent;
   position: relative;
-
+  z-index: 2;
 }
 
 /* Hide the default mm/dd/yyyy placeholder */
@@ -399,14 +400,6 @@ background-image: none !important;
 /* .DropDate::placeholder {
   font-size: clamp(12px, 1vw, 18px);
 } */
-
-
-
-
-
-
-
-
 .ReturnDate,
 .ReturnLocation{
    width: 100%;
@@ -680,7 +673,7 @@ input[type="datetime-local"] {
   }
  .PickupDate{
   width: 100%;
- 
+  padding: 4.8vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
   margin: 0.6vw 0;
   border: none;
   border-radius: 5px;
@@ -720,7 +713,7 @@ background-image: none !important;
 
  .Dropdate{
   width: 100%;
-
+  padding: 4.8vw 2.5vw 0.7vw 2.5vw; /* space for the icon */
   margin: 0.6vw 0;
   border: none;
   border-radius: 5px;

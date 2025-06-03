@@ -1,0 +1,506 @@
+body {
+  background-color: #F5F8F7;
+  font-family: "Roboto Condensed", "Roboto Condensed Placeholder", sans-serif;
+}
+
+/* Booking Form */
+.contact-container {
+  position: relative;
+  margin-top: 0px;
+  gap: 1px;
+  max-height: 100vh;
+  height: auto;
+  width: 35vw;
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+
+.contact-container .button {
+  border-radius: 32px;
+  display: flex;
+  height: 38px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  margin-top: -10px;
+}
+
+.contact-container .button.active {
+  color: #FFF;
+  border: none;
+  background: #046AAA;
+}
+
+.contact-container .button.active:hover {
+  background-color: #046AAA;
+  color: white;
+}
+
+.contact-container .button.inactive {
+  background: #FFF;
+  color: #484848;
+  border: 1px solid #484848;
+}
+
+.contact-container .button.inactive:hover {
+  background-color: #046AAA;
+  color: white;
+}
+
+.contact-container .button-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.contact-container .button-group:hover {
+  color: white;
+}
+
+.contact-container .label {
+  color: #666666;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input Styles */
+.Fullname,
+.Contactno,
+.Select,
+.Pickup,
+.Droplocation,
+.DropDate,
+.ReturnLocation,
+.ReturnDate {
+  width: 100%;
+  padding: 0.7vw;
+  margin: 0.6vw 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #E7E7E7;
+  box-sizing: border-box;
+  color: #808080;
+}
+
+.Fullname::placeholder,
+.Contactno::placeholder,
+.Select::placeholder,
+.Pickup::placeholder,
+.Droplocation::placeholder {
+  font-size: clamp(12px, 1vw, 18px);
+}
+
+/* Time Input Wrapper */
+.time-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.PickupTime {
+  width: 100%;
+  padding: 0.7vw;
+  margin: 0.6vw 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #E7E7E7;
+  box-sizing: border-box;
+  color: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.PickupTime.has-value {
+  color: #808080;
+}
+
+.PickupTime::-webkit-datetime-edit {
+  color: transparent;
+}
+
+.PickupTime.has-value::-webkit-datetime-edit {
+  color: #808080;
+}
+
+.time-placeholder {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #808080;
+  pointer-events: none;
+  z-index: 5;
+  font-size: clamp(12px, 1vw, 18px);
+}
+
+/* Date Input Wrapper */
+.date-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.PickupDate,
+.Dropdate,
+.ReturnDate {
+  width: 100%;
+  padding: 0.7vw;
+  margin: 0.6vw 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #E7E7E7;
+  box-sizing: border-box;
+  color: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.PickupDate.has-value,
+.Dropdate.has-value,
+.ReturnDate.has-value {
+  color: #808080;
+}
+
+.PickupDate::-webkit-datetime-edit,
+.Dropdate::-webkit-datetime-edit,
+.ReturnDate::-webkit-datetime-edit {
+  color: transparent;
+}
+
+.PickupDate.has-value::-webkit-datetime-edit,
+.Dropdate.has-value::-webkit-datetime-edit,
+.ReturnDate.has-value::-webkit-datetime-edit {
+  color: #808080;
+}
+
+.date-placeholder {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7a7a7a;
+  pointer-events: none;
+  z-index: 1;
+  font-size: clamp(12px, 1vw, 18px);
+}
+
+/* Layout Styles */
+.Pickup-LD {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contact-container .row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.contact-container .column {
+  flex: 1;
+}
+
+/* Button Styles */
+.contact-container .send-email-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  background-color: #ffffff;
+  color: #046AAA;
+  border: 1px solid #046AAA;
+  height: 40px;
+  padding: 12px 24px;
+  width: 100%;
+  margin-top: 15px;
+  margin-right: 1.5vw;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.contact-container .send-email-btn:hover {
+  background-color: #046AAA;
+  color: #fff;
+}
+
+.contact-container .send-email-btn:disabled {
+  background-color: #f0f0f0;
+  color: #808080;
+  border: 1px solid #adadad;
+  cursor: default;
+  opacity: 0.6;
+}
+
+/* Contact Info */
+.contact-whatsApp1 {
+  color: #FD3B3B;
+  margin-top: 0.8vw;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-whatsApp1 a {
+  margin-left: 5px;
+}
+
+.phone-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.phone-link:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: rgba(255, 0, 0, 0.89);
+  font-size: 0.8rem;
+  margin-top: 2px;
+  display: block;
+}
+
+/* Confirmation Styles */
+.confirmation-content {
+  text-align: center;
+  justify-content: center;
+}
+
+.ok-btn {
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Media Queries */
+@media (min-width: 321px) and (max-width: 500px) {
+  .contact-container {
+      width: 80vw;
+  }
+
+  .time-input-wrapper,
+  .date-input-wrapper {
+      width: 100%;
+  }
+
+  .PickupTime,
+  .PickupDate,
+  .Dropdate,
+  .ReturnDate {
+      padding: 3vw;
+      font-size: 15px;
+  }
+
+  .time-placeholder,
+  .date-placeholder {
+      left: 3vw;
+      font-size: 13px;
+  }
+
+  .PickupTime.has-value,
+  .PickupDate.has-value,
+  .Dropdate.has-value,
+  .ReturnDate.has-value {
+      padding: 0.7vw 2.5vw !important;
+  }
+
+  .contact-container.popup-form {
+      width: 92vw;
+      padding: 4vw;
+  }
+
+  .contact-container.popup-form h2 {
+      font-size: 4.5vw;
+  }
+
+  .contact-container.popup-form p {
+      font-size: 4.2vw;
+  }
+
+  .contact-container .button-group {
+      flex-direction: row;
+      gap: 10px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+  }
+
+  .contact-container .button {
+      width: 100%;
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .contact-container .row {
+      flex-direction: column;
+      gap: 12px;
+  }
+
+  .contact-container .column {
+      width: 100%;
+  }
+
+  .Fullname,
+  .Contactno,
+  .Select,
+  .Pickup,
+  .Droplocation,
+  .DropDate,
+  .ReturnLocation,
+  .ReturnDate {
+      font-size: 15px;
+      padding: 3vw;
+  }
+
+  .contact-container .send-email-btn {
+      font-size: 15px;
+      padding: 12px;
+  }
+
+  .contact-container .close-btn img {
+      width: 5vw;
+      right: 12px;
+      top: 12px;
+      left: auto;
+  }
+
+  ::placeholder {
+      font-size: 13px;
+  }
+
+  input[type="datetime-local"] {
+      font-size: 14px;
+      padding: 12px;
+  }
+
+  .contact-whatsApp1 {
+      font-size: 11px;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .ok-btn {
+      padding: 18px;
+  }
+}
+
+@media (max-width: 320px) {
+  .contact-container {
+      width: 80vw;
+  }
+
+  .PickupTime,
+  .PickupDate,
+  .Dropdate,
+  .ReturnDate {
+      padding: 10px;
+      font-size: 13px;
+  }
+
+  .time-placeholder,
+  .date-placeholder {
+      left: 10px;
+      font-size: 12px;
+  }
+
+  .contact-container.popup-form {
+      width: 94vw;
+      padding: 4vw;
+      border-radius: 10px;
+  }
+
+  .contact-container.popup-form h2 {
+      font-size: 5vw;
+      margin-bottom: 10px;
+  }
+
+  .contact-container.popup-form p {
+      font-size: 3.8vw;
+      margin-bottom: 12px;
+  }
+
+  .contact-container .button-group {
+      flex-direction: row;
+      gap: 10px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+
+  .contact-container .button {
+      width: 100%;
+      font-size: 13px;
+      padding: 10px;
+      border-radius: 20px;
+  }
+
+  .contact-container .row {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .contact-container .column {
+      width: 100%;
+  }
+
+  .Fullname,
+  .Contactno,
+  .Select,
+  .Pickup,
+  .Droplocation,
+  .DropDate,
+  .ReturnLocation,
+  .ReturnDate {
+      font-size: 13px;
+      padding: 10px;
+  }
+
+  input[type="datetime-local"] {
+      font-size: 13px;
+      padding: 10px;
+  }
+
+  ::placeholder {
+      font-size: 12px;
+  }
+
+  .contact-container .send-email-btn {
+      font-size: 14px;
+      padding: 10px;
+      width: 100%;
+  }
+
+  .contact-container .close-btn img {
+      width: 7vw;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+  }
+
+  .contact-whatsApp1 {
+      font-size: 10px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 12px;
+  }
+
+  .ok-btn {
+      padding: 14px;
+      text-align: center;
+  }
+}

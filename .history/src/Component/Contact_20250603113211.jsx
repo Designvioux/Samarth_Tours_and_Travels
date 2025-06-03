@@ -339,10 +339,12 @@
 // export default BookingForm;
 
 
-import React, { useState, useEffect } from "react";
+
+
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import "./CSS/Contact.css";
+import "./CSS/";
 
 const BookingForm = () => {
   const [isConfirmationVisible, setIsConfirmationVisible] = useState(false);
@@ -353,33 +355,7 @@ const BookingForm = () => {
     "17STR Tempo Traveller", "21STR Tempo Traveller", "26STR Tempo Traveller", "32STR Tempo Traveller"
   ];
 
-  useEffect(() => {
-    const dateInputs = document.querySelectorAll('.PickupDate, .Dropdate, .ReturnDate, .PickupTime');
-    
-    const handleInputChange = (e) => {
-      if (e.target.value) {
-        e.target.classList.add('has-value');
-      } else {
-        e.target.classList.remove('has-value');
-      }
-    };
-
-    dateInputs.forEach(input => {
-      input.addEventListener('change', handleInputChange);
-      if (input.value) {
-        input.classList.add('has-value');
-      }
-    });
-
-    return () => {
-      dateInputs.forEach(input => {
-        input.removeEventListener('change', handleInputChange);
-      });
-    };
-  }, []);
-
   const formatDate = (dateStr) => {
-    if (!dateStr) return "";
     const date = new Date(dateStr);
     const day = String(date.getDate()).padStart(2, "0");
     const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -388,7 +364,6 @@ const BookingForm = () => {
   };
 
   const formatTime12Hour = (timeStr) => {
-    if (!timeStr) return "";
     const [hour, minute] = timeStr.split(":").map(Number);
     const ampm = hour >= 12 ? "PM" : "AM";
     const hour12 = hour % 12 || 12;
@@ -492,28 +467,14 @@ ${values.fullName}`;
 
   const selectTripType = (type) => {
     formik.setFieldValue("tripType", type);
+
+    // Clear return trip fields when switching to One Way
     if (type === "One Way Trip") {
       formik.setFieldValue("returnLocation", "");
       formik.setFieldValue("returnDate", "");
     }
   };
 
-  const handleInputChange = (e) => {
-    formik.handleChange(e);
-    const input = e.target;
-    
-    // For date inputs
-    if (input.classList.contains('PickupDate') || 
-        input.classList.contains('Dropdate') || 
-        input.classList.contains('ReturnDate')) {
-      if (input.value) {
-        input.classList.add('has-value');
-      } else {
-        input.classList.remove('has-value');
-      }
-    }
-  };
-  
   return (
     <div className="heading">
       <div className="contact-container">
@@ -581,7 +542,6 @@ ${values.fullName}`;
                   name="pickupTime"
                   className={`PickupTime ${formik.values.pickupTime ? 'has-value' : ''}`}
                   {...formik.getFieldProps("pickupTime")}
-                  onChange={handleInputChange}
                 />
                 {!formik.values.pickupTime && (
                   <span className="time-placeholder">Select Pick Up Time</span>
@@ -612,7 +572,6 @@ ${values.fullName}`;
                       name="pickupDate"
                       className={`PickupDate ${formik.values.pickupDate ? 'has-value' : ''}`}
                       {...formik.getFieldProps("pickupDate")}
-                      onChange={handleInputChange}
                     />
                     {!formik.values.pickupDate && (
                       <span className="date-placeholder">Select Pick Up Date</span>
@@ -645,7 +604,6 @@ ${values.fullName}`;
                       name="dropDate"
                       className={`Dropdate ${formik.values.dropDate ? 'has-value' : ''}`}
                       {...formik.getFieldProps("dropDate")}
-                      onChange={handleInputChange}
                     />
                     {!formik.values.dropDate && (
                       <span className="date-placeholder">Select Drop Date</span>
@@ -657,6 +615,7 @@ ${values.fullName}`;
                 </div>
               </div>
 
+              {/* Show return trip fields only if Round Trip */}
               {formik.values.tripType === "Round Trip" && (
                 <div className="Pickup-LD">
                   <div className="column">
@@ -679,7 +638,6 @@ ${values.fullName}`;
                         name="returnDate"
                         className={`ReturnDate ${formik.values.returnDate ? 'has-value' : ''}`}
                         {...formik.getFieldProps("returnDate")}
-                        onChange={handleInputChange}
                       />
                       {!formik.values.returnDate && (
                         <span className="date-placeholder">Select Return Date</span>
@@ -722,3 +680,10 @@ ${values.fullName}`;
 };
 
 export default BookingForm;
+
+
+
+
+
+
+

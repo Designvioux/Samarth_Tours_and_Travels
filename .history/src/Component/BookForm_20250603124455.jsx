@@ -218,7 +218,7 @@ ${fullName}`;
                     <input
                       type="date"
                       name="pickupDate"
-                      className={`PickupDate ${formik.values.pickupDate ? 'has-value' : ''}`}
+                      className={`Book-PickupDate ${formik.values.pickupDate ? 'has-value' : ''}`}
                       {...formik.getFieldProps("pickupDate")}
                       onChange={handleInputChange}
                     />
@@ -248,23 +248,16 @@ ${fullName}`;
           </div>
 
           <div className="column">
-                  <div className="date-input-wrapper">
-                    <input
-                      type="date"
-                      name="dropDate"
-                      className={`Dropdate ${formik.values.dropDate ? 'has-value' : ''}`}
-                      {...formik.getFieldProps("dropDate")}
-                      onChange={handleInputChange}
-                    />
-                    {!formik.values.dropDate && (
-                      <span className="date-placeholder">Select Drop Date</span>
-                    )}
-                  </div>
-                  {formik.touched.dropDate && formik.errors.dropDate && (
-                    <span className="error">{formik.errors.dropDate}</span>
-                  )}
-                </div>
-        
+            <input
+              type="date"
+              name="dropDate"
+              className="Book-Dropdate"
+              {...formik.getFieldProps("dropDate")}
+            />
+            {formik.touched.dropDate && formik.errors.dropDate && (
+              <span className="error">{formik.errors.dropDate}</span>
+            )}
+          </div>
 </div>
           {/* ✅ Only show when Round Trip is selected */}
           {formik.values.tripType === "Round Trip" && (
@@ -282,24 +275,18 @@ ${fullName}`;
                 )}
               </div>
 
-        
               <div className="column">
-                    <div className="date-input-wrapper">
-                      <input
-                        type="date"
-                        name="returnDate"
-                        className={`ReturnDate ${formik.values.returnDate ? 'has-value' : ''}`}
-                        {...formik.getFieldProps("returnDate")}
-                        onChange={handleInputChange}
-                      />
-                      {!formik.values.returnDate && (
-                        <span className="date-placeholder">Select Return Date</span>
-                      )}
-                    </div>
-                    {formik.touched.returnDate && formik.errors.returnDate && (
-                      <span className="error">{formik.errors.returnDate}</span>
-                    )}
-                  </div>
+                <input
+                  type="date"
+                  name="returnDate"
+                  className="ReturnDate"
+                  placeholder="Select Return Date"
+                  {...formik.getFieldProps("returnDate")}
+                />
+                {formik.touched.returnDate && formik.errors.returnDate && (
+                  <span className="error">{formik.errors.returnDate}</span>
+                )}
+              </div>
             </div>
           )}
 

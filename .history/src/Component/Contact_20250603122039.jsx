@@ -513,7 +513,6 @@ ${values.fullName}`;
       }
     }
   };
-  
   return (
     <div className="heading">
       <div className="contact-container">

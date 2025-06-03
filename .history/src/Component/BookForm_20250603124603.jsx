@@ -264,7 +264,7 @@ ${fullName}`;
                     <span className="error">{formik.errors.dropDate}</span>
                   )}
                 </div>
-        
+              </div>
 </div>
           {/* ✅ Only show when Round Trip is selected */}
           {formik.values.tripType === "Round Trip" && (
@@ -282,24 +282,18 @@ ${fullName}`;
                 )}
               </div>
 
-        
               <div className="column">
-                    <div className="date-input-wrapper">
-                      <input
-                        type="date"
-                        name="returnDate"
-                        className={`ReturnDate ${formik.values.returnDate ? 'has-value' : ''}`}
-                        {...formik.getFieldProps("returnDate")}
-                        onChange={handleInputChange}
-                      />
-                      {!formik.values.returnDate && (
-                        <span className="date-placeholder">Select Return Date</span>
-                      )}
-                    </div>
-                    {formik.touched.returnDate && formik.errors.returnDate && (
-                      <span className="error">{formik.errors.returnDate}</span>
-                    )}
-                  </div>
+                <input
+                  type="date"
+                  name="returnDate"
+                  className="ReturnDate"
+                  placeholder="Select Return Date"
+                  {...formik.getFieldProps("returnDate")}
+                />
+                {formik.touched.returnDate && formik.errors.returnDate && (
+                  <span className="error">{formik.errors.returnDate}</span>
+                )}
+              </div>
             </div>
           )}
 

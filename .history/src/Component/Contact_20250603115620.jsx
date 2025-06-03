@@ -342,7 +342,7 @@
 import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import "./CSS/Contact.css";
+import "./CSS/ContactNew.css";
 
 const BookingForm = () => {
   const [isConfirmationVisible, setIsConfirmationVisible] = useState(false);
@@ -500,20 +500,13 @@ ${values.fullName}`;
 
   const handleInputChange = (e) => {
     formik.handleChange(e);
-    const input = e.target;
-    
-    // For date inputs
-    if (input.classList.contains('PickupDate') || 
-        input.classList.contains('Dropdate') || 
-        input.classList.contains('ReturnDate')) {
-      if (input.value) {
-        input.classList.add('has-value');
-      } else {
-        input.classList.remove('has-value');
-      }
+    if (e.target.value) {
+      e.target.classList.add('has-value');
+    } else {
+      e.target.classList.remove('has-value');
     }
   };
-  
+
   return (
     <div className="heading">
       <div className="contact-container">
